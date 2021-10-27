@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Anormal - calming - ambient.wav-eb00a6cab66e2908db0d86404ab4d934.sample"
+
+[deps]
+
+source_file="res://music/lost1.2_wav/Anormal - calming - ambient.wav"
+dest_files=[ "res://.import/Anormal - calming - ambient.wav-eb00a6cab66e2908db0d86404ab4d934.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

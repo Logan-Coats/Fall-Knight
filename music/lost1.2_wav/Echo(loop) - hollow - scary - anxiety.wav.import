@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Echo(loop) - hollow - scary - anxiety.wav-2abb5e6852d6fbd04803604bfe86385d.sample"
+
+[deps]
+
+source_file="res://music/lost1.2_wav/Echo(loop) - hollow - scary - anxiety.wav"
+dest_files=[ "res://.import/Echo(loop) - hollow - scary - anxiety.wav-2abb5e6852d6fbd04803604bfe86385d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

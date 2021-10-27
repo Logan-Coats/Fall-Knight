@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Transfer(loop) - drone - spaces.wav-ff53ff8a76ed7eee696bad41f5284530.sample"
+
+[deps]
+
+source_file="res://music/lost1.2_wav/Transfer(loop) - drone - spaces.wav"
+dest_files=[ "res://.import/Transfer(loop) - drone - spaces.wav-ff53ff8a76ed7eee696bad41f5284530.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Test Subject HLWN-1031.ogg-4540e6f6b8c24627d6aa7b391e093785.oggstr"
+
+[deps]
+
+source_file="res://music/Test Subject HLWN-1031.ogg"
+dest_files=[ "res://.import/Test Subject HLWN-1031.ogg-4540e6f6b8c24627d6aa7b391e093785.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

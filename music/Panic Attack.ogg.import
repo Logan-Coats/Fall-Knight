@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Panic Attack.ogg-1f7c141df8d6ae9213fc1a8f66c77e7f.oggstr"
+
+[deps]
+
+source_file="res://music/Panic Attack.ogg"
+dest_files=[ "res://.import/Panic Attack.ogg-1f7c141df8d6ae9213fc1a8f66c77e7f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

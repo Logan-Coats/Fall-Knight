@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Unknown Dangers.ogg-56c448558bc0841a0b23c372ebd9d446.oggstr"
+
+[deps]
+
+source_file="res://music/Unknown Dangers.ogg"
+dest_files=[ "res://.import/Unknown Dangers.ogg-56c448558bc0841a0b23c372ebd9d446.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

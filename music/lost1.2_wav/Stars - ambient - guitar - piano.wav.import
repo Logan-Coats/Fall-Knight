@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Stars - ambient - guitar - piano.wav-64b93415f7e6e84ffbb5f28ab0e1ec29.sample"
+
+[deps]
+
+source_file="res://music/lost1.2_wav/Stars - ambient - guitar - piano.wav"
+dest_files=[ "res://.import/Stars - ambient - guitar - piano.wav-64b93415f7e6e84ffbb5f28ab0e1ec29.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
