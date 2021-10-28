@@ -6,15 +6,15 @@ Created by Logan Coats
 #Credits
 
 ##Assets:
--dungeon tileset by [Corwin ZX](corwin-zx.itch.io)
--medieval fantasy character pack by [Oco](oco.itch.io)
--skeleton sprite pack by [Jesse M](jesse-m.itch.io)
--Input Prompts by [Kenney](kenney.nl)
+-dungeon tileset by [Corwin ZX](https://corwin-zx.itch.io)
+-Medieval warrior pack 2 by [Luiz Melo](https://luizmelo.itch.io)
+-skeleton sprite pack by [Jesse M](https://jesse-m.itch.io)
+-Input Prompts by [Kenney](https://kenney.nl)
  
 ##Music:
 Halloween music pack 2018 by [Sebastian Schwamm / Zebastian](https://zebby.itch.io/)
-Lost by [Makoto](makotohiramatsu.itch.io)
+Lost by [Makoto](https://makotohiramatsu.itch.io)
 
 ##Fonts: 
-BitPotion by [Joe Brogers](joebrogers.itch.io)
-Middle by [ClowdDev](clowddev.itch.io)
+BitPotion by [Joe Brogers](https://joebrogers.itch.io)
+Middle by [Gowl](https://clowddev.itch.io)
