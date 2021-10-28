@@ -9,6 +9,7 @@ Created by Logan Coats
 -dungeon tileset by [Corwin ZX](corwin-zx.itch.io)
 -medieval fantasy character pack by [Oco](oco.itch.io)
 -skeleton sprite pack by [Jesse M](jesse-m.itch.io)
+-Input Prompts by [Kenney](kenney.nl)
  
 ##Music:
 Halloween music pack 2018 by [Sebastian Schwamm / Zebastian](https://zebby.itch.io/)
