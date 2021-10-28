@@ -17,4 +17,4 @@ Lost by [Makoto](https://makotohiramatsu.itch.io)
 
 ##Fonts: 
 BitPotion by [Joe Brogers](https://joebrogers.itch.io)
-Middle by [ClowdDev](https://clowddev.itch.io)
+Middle by [Gowl](https://clowddev.itch.io)
