@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/KnightJumpAndFall_strip.png-405bdaa27983f94167f52ee51974d096.stex"
+path="res://.import/Idle.png-9f2b39373b8986e26c51070d704c967a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Knight/KnightJumpAndFall_strip.png"
-dest_files=[ "res://.import/KnightJumpAndFall_strip.png-405bdaa27983f94167f52ee51974d096.stex" ]
+source_file="res://Medieval Warrior Pack 2/Sprites/Idle.png"
+dest_files=[ "res://.import/Idle.png-9f2b39373b8986e26c51070d704c967a.stex" ]
 
 [params]
 

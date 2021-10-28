@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/noBKG_KnightDeath_strip.png-f8d30461df4556baae51e8a99e7f797a.stex"
+path="res://.import/Attack1.png-0f764ac2fa2fad86cccfc1bbf1cd7762.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Knight/noBKG_KnightDeath_strip.png"
-dest_files=[ "res://.import/noBKG_KnightDeath_strip.png-f8d30461df4556baae51e8a99e7f797a.stex" ]
+source_file="res://Medieval Warrior Pack 2/Sprites/Attack1.png"
+dest_files=[ "res://.import/Attack1.png-0f764ac2fa2fad86cccfc1bbf1cd7762.stex" ]
 
 [params]
 
