@@ -47,6 +47,7 @@ visible = false
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HealthUI" parent="CanvasLayer" instance=ExtResource( 6 )]
+[connection signal="dead" from="Player" to="." method="_on_Player_dead"]
 
 [editable path="Camera2D"]
 

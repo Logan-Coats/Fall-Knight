@@ -75,9 +75,6 @@ func _on_hurtbox_area_entered(area):
 	#hit effect
 	#hurtbox.create_hit_effect()
 
-
-
-
 func _on_Stats_nohealth():
 	queue_free()
 	var enemyDeathEffect # = EnemyDeathEffect.instance()
