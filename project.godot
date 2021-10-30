@@ -19,6 +19,10 @@ config/name="Fall-Knight"
 run/main_scene="res://Main Menu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+PlayerStats="*res://Stats.tscn"
+
 [display]
 
 window/size/width=1280
