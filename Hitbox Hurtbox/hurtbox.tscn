@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Medieval Warrior Pack 2/hurtbox.gd" type="Script" id=1]
+[ext_resource path="res://Hitbox Hurtbox/hurtbox.gd" type="Script" id=1]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 8.65534
-height = 16.0
+radius = 16.0
+height = 0.0
 
 [node name="hurtbox" type="Area2D"]
 collision_layer = 4

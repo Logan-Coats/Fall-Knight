@@ -1,6 +1,6 @@
 extends Area2D
 
-onready var timer = $TImer
+onready var timer = $Timer
 onready var collisionshape = $CollisionShape2D
 
 var invincible = false setget set_invincible

@@ -12,7 +12,7 @@ var stats = PlayerStats
 onready var animp = $AnimatedSprite
 
 onready var anims = $AnimatedSprite
-onready var swordhitbox = $hitboxpivot/SwordHitbox/collisionshape2d
+onready var swordhitbox = $hitboxpivot/hitbox/collisionshape2d
 onready var hitboxpivot = $hitboxpivot
 onready var hurtbox = $hurtbox
 
@@ -23,13 +23,13 @@ func _ready():
 
 func _process(delta):
 	
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("ui_right") && hurtbox.invincible == false:
 		velocity.x = move_toward(velocity.x,MAX_SPEED,ACCELERATION*FRICTION)
 		anims.flip_h = false
 		hitboxpivot.rotation_degrees =0
 		if(is_on_floor()):
 			animp.play("running")
-	elif Input.is_action_pressed("ui_left"):
+	elif Input.is_action_pressed("ui_left")&& hurtbox.invincible == false:
 		velocity.x = move_toward(velocity.x, -MAX_SPEED,ACCELERATION*FRICTION)
 		anims.flip_h = true
 		hitboxpivot.rotation_degrees =180
@@ -40,7 +40,7 @@ func _process(delta):
 		swordhitbox.disabled = false
 		velocity.x = velocity.x/1.25
 		velocity.y = velocity.y/1.25
-	elif is_on_floor(): 
+	elif is_on_floor() && hurtbox.invincible == false: 
 		velocity.x = move_toward(velocity.x, 0,FRICTION*delta)
 		animp.play("idle")
 		swordhitbox.disabled = true
@@ -52,10 +52,10 @@ func _process(delta):
 		else:
 			swordhitbox.disabled = true
 		velocity = velocity/1.25
-	elif Input.is_action_pressed("jump") && is_on_floor():
+	elif Input.is_action_pressed("jump") && is_on_floor() && hurtbox.invincible == false:
 		animp.play("jump")
 		velocity.y = -JUMPHEIGHT
-	elif velocity.y > 0:
+	elif velocity.y > 0 && hurtbox.invincible == false:
 		animp.play("falling")
 
 func _physics_process(delta):
@@ -64,5 +64,6 @@ func _physics_process(delta):
 
 func _on_hurtbox_area_entered(area):
 	stats.health -= area.damage
+	animp.play("hurt")
 	hurtbox.start_invincibility(1)
 
