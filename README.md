@@ -35,3 +35,30 @@ Created by Logan Coats
 
 
 -Middle by [Gowl](https://clowddev.itch.io)
+
+
+
+# Cataloging Progress:
+## Day Zero
+Theme is Secretive Fall -- no ideas.
+Gather fall - or halloween themed assets.
+Get a player asset, 2 tile sets, a skeleton enemy and some music.
+Created godot project and repository.
+
+## Day One
+Added more assets, 2 fonts, button inputs and a new player asset.
+Removed old player.
+Created tile sets for dungeon and fall tiles. (Unfortunately no auto tile...)
+Added player movement and did some work with hitboxes.
+Created main menu and basic transition.
+Added camera for level 1. -- camera saved as scene for use in more than 1 level.
+
+## Day Two
+Tried some things out with player animation, settling for what i had originally.
+Decided slow-fall while holding attack key will be a feature/mechanic.
+Changed transition for scenes.
+Added a fade in/out for changing between scenes.
+Added "press any key to begin . . ." functionality for main menu.
+Set up player stats as a singleton.
+Changed collision layers and masks for proper collision.
+Added UI for health, still need to make health asset or find one.
