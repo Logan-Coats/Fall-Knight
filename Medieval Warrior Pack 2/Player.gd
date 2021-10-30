@@ -3,8 +3,8 @@ extends KinematicBody2D
 const FRICTION = 500
 const ACCELERATION = 500
 const MAX_SPEED = 120
-const GRAVITY = 200
-const JUMPHEIGHT = 200
+const GRAVITY = 400
+const JUMPHEIGHT = 275
 
 var velocity = Vector2.ZERO
 var stats = PlayerStats

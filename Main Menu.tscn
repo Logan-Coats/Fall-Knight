@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Middle.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://BitPotionExt.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Main Menu.gd" type="Script" id=3]
+[ext_resource path="res://FadeINOUT.tscn" type="PackedScene" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 140
@@ -49,15 +50,14 @@ margin_top = -13.5
 margin_right = 104.5
 margin_bottom = 13.5
 custom_fonts/font = SubResource( 2 )
-text = "click anywhere to begin..."
-
-[node name="StartGamebtn" type="Button" parent="."]
-modulate = Color( 1, 1, 1, 0.203922 )
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -4.0
-margin_right = -4.0
+text = "press any key to begin . . ."
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="StartGamebtn" to="." method="_on_StartGamebtn_pressed"]
+
+[node name="FadeINOUT" parent="." instance=ExtResource( 4 )]
+
+[node name="Timer" type="Timer" parent="."]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+[editable path="FadeINOUT"]

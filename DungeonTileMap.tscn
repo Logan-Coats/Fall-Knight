@@ -206,6 +206,8 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 0/z_index = 0
 
-[node name="TileMap" type="TileMap"]
+[node name="Dungeon" type="TileMap"]
 tile_set = SubResource( 21 )
+cell_size = Vector2( 32, 32 )
+collision_mask = 19
 format = 1
