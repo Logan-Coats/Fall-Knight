@@ -3,6 +3,9 @@
 Created by Logan Coats
 
 
+
+Fall Knight is meant to feel like a castlevania-type of game, with a catch... you can slow your *fall* by attacking. With the addition of this mechanic, the heroing knight can cross any gap in his way! 
+
 # Credits
 
 ## Assets:
