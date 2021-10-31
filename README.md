@@ -19,7 +19,7 @@ Created by Logan Coats
 
 -Input Prompts by [Kenney](https://kenney.nl)
  
-## Music:
+## Sounds:
 -Halloween music pack 2018 by [Sebastian Schwamm / Zebastian](https://zebby.itch.io/)
 
 
@@ -28,7 +28,11 @@ Created by Logan Coats
 
 
 
+-Death Sounds by [Exewin](https://opengameart.org/users/exewin)
 
+
+
+-8 Bit Death Whirl Sound by [Fupi](https://opengameart.org/users/fupi)
 ## Fonts: 
 -BitPotion by [Joe Brogers](https://joebrogers.itch.io)
 
