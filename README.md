@@ -66,3 +66,11 @@ Added "press any key to begin . . ." functionality for main menu.
 Set up player stats as a singleton.
 Changed collision layers and masks for proper collision.
 Added UI for health, still need to make health asset or find one.
+
+## Day Three
+Created 2 new enemies. the bat and the rat. 
+The bat is fully functional now, (maybe need to clean up its wander code) and the rat only needs its pseudo state machine setup with movement.
+Player now has hurt animation when interacting with enemy hitboxes, and when player dies, a prompt appears on screen to restart level or quit game. 
+Created asset for use with healtUI - did not import yet.
+Might use heartbeast's asset for enemy hit and death animations. - havent decided yet.
+Got death sounds but have not imported them yet.
