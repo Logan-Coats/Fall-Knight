@@ -67,8 +67,6 @@ func pick_random_state(state_list):
 	state_list.shuffle()
 	return state_list.pop_front()
 
-
-
 func _on_hurtbox_area_entered(area):
 	stats.health -= area.damage
 	knockback = area.knockbackvector * 120

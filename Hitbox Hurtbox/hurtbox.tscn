@@ -15,6 +15,9 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Timer2" type="Timer" parent="."]
 [connection signal="invincibility_end" from="." to="." method="_on_hurtbox_invincibility_end"]
 [connection signal="invincibility_start" from="." to="." method="_on_hurtbox_invincibility_start"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]

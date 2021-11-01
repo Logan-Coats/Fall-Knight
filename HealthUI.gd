@@ -9,13 +9,13 @@ onready var healthUIEmpty = $HealthUIEmpty
 func set_health(value):
 	health = clamp(value, 0, max_health)
 	if healthUIFull != null:
-		healthUIFull.rect_size.x = health # * size of indiv health bar.
+		healthUIFull.rect_size.x = health * 150
 		
 func set_max_health(value):
 	max_health = max(value, 1)
 	self.health = min(health, max_health)
 	if healthUIEmpty:
-		healthUIEmpty.rect_size.x = max_health # * size of indiv health bar.
+		healthUIEmpty.rect_size.x = max_health *150
 
 func _ready():
 	self.max_health = PlayerStats.maxhealth

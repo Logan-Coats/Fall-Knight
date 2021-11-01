@@ -29,13 +29,13 @@ func _process(delta):
 		hurtbox.collisionshape.set_deferred("disabled",true)
 		emit_signal("dead")
 	else:
-		if Input.is_action_pressed("ui_right") && hurtbox.invincible == false:
+		if Input.is_action_pressed("ui_right") && hurtbox.moveable == true:
 			velocity.x = move_toward(velocity.x,MAX_SPEED,ACCELERATION*FRICTION)
 			anims.flip_h = false
 			hitboxpivot.rotation_degrees =0
 			if(is_on_floor()):
 				animp.play("running")
-		elif Input.is_action_pressed("ui_left")&& hurtbox.invincible == false:
+		elif Input.is_action_pressed("ui_left")&& hurtbox.moveable == true:
 			velocity.x = move_toward(velocity.x, -MAX_SPEED,ACCELERATION*FRICTION)
 			anims.flip_h = true
 			hitboxpivot.rotation_degrees =180
@@ -58,7 +58,7 @@ func _process(delta):
 			else:
 				swordhitbox.disabled = true
 			velocity = velocity/1.25
-		elif Input.is_action_pressed("jump") && is_on_floor() && hurtbox.invincible == false:
+		elif Input.is_action_pressed("jump") && is_on_floor() && hurtbox.moveable == true:
 			animp.play("jump")
 			velocity.y = -JUMPHEIGHT
 		elif velocity.y > 0 && hurtbox.invincible == false:
@@ -71,6 +71,8 @@ func _physics_process(delta):
 func _on_hurtbox_area_entered(area):
 	stats.health -= area.damage
 	animp.play("hurt")
-	hurtbox.start_invincibility(1)
+	velocity.x = 0
+	velocity = move_and_slide(velocity,Vector2.UP)
+	hurtbox.start_invincibility(2)
 
 
