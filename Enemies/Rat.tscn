@@ -76,6 +76,7 @@ shape = SubResource( 8 )
 disabled = false
 
 [node name="hurtbox" parent="." instance=ExtResource( 2 )]
+gravity_point = true
 collision_layer = 8
 
 [node name="CollisionShape2D" parent="hurtbox" index="0"]
