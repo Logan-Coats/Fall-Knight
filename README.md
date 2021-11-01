@@ -20,6 +20,8 @@ Fall Knight is meant to feel like a castlevania-type of game, with a catch... yo
 
 
 
+-generic skeletons by [Bit Life](https://bit-life.itch.io/)
+
 -Input Prompts by [Kenney](https://kenney.nl)
  
 ## Sounds:
