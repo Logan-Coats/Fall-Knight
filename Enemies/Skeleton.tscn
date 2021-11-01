@@ -283,17 +283,17 @@ animations = [ {
 "speed": 8.0
 }, {
 "frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
-"loop": true,
+"loop": false,
 "name": "hurt",
 "speed": 8.0
 }, {
 "frames": [ SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ) ],
-"loop": true,
+"loop": false,
 "name": "attack",
 "speed": 6.5
 }, {
 "frames": [ SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ) ],
-"loop": true,
+"loop": false,
 "name": "death",
 "speed": 10.0
 }, {
@@ -304,7 +304,7 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=84]
-radius = 27.4982
+radius = 16.6314
 height = 213.794
 
 [sub_resource type="CapsuleShape2D" id=83]
@@ -323,7 +323,6 @@ shape = SubResource( 82 )
 scale = Vector2( 1.40418, 1.40497 )
 frames = SubResource( 63 )
 animation = "attack"
-flip_h = true
 
 [node name="Stats" parent="." instance=ExtResource( 8 )]
 maxhealth = 3
@@ -335,10 +334,13 @@ position = Vector2( 0, 2.64866 )
 position = Vector2( 0, -2.64866 )
 collision_mask = 4
 
+[node name="collisionshape2d" parent="hitboxpivot/hitbox" index="0"]
+position = Vector2( 17.4324, 2.64866 )
+
 [node name="PlayerDetectionZone" parent="." instance=ExtResource( 9 )]
-visible = false
 
 [node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
+position = Vector2( 0, 9.80003 )
 rotation = 1.5708
 shape = SubResource( 84 )
 
@@ -351,6 +353,8 @@ position = Vector2( -7.25, 3 )
 shape = SubResource( 83 )
 [connection signal="nohealth" from="Stats" to="." method="_on_Stats_nohealth"]
 [connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]
+
+[editable path="hitboxpivot/hitbox"]
 
 [editable path="PlayerDetectionZone"]
 
