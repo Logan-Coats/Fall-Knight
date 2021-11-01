@@ -21,6 +21,7 @@ var faceright = true
 onready var stats = $Stats
 onready var sprite = $Skeleton
 onready var hurtbox = $hurtbox
+onready var hitbox = $hitboxpivot/hitbox/collisionshape2d
 onready var playerdetectionzone = $PlayerDetectionZone
 onready var hitboxpivot = $hitboxpivot
 
@@ -42,10 +43,23 @@ func _physics_process(delta):
 				var player = playerdetectionzone.player
 				if player != null:
 					accelerate_towards_point(player.global_position,delta)
-					#if player close to skeleton, state = attack
 				else: state = IDLE
 		ATTACK:
-			pass
+			if faceright:
+				sprite.position.x = 12
+				sprite.position.y = -4
+			else:
+				sprite.position.x = -12
+				sprite.position.y = -4
+			sprite.play("attack")
+			if sprite.frame == 6 ||sprite.frame == 7 ||sprite.frame == 8 ||sprite.frame == 9:
+				hitbox.disabled = false
+			else: hitbox.disabled = true
+			
+			if sprite.playing == false:
+				sprite.position.x = 0
+				sprite.position.y = 0
+				state = IDLE
 			#play attack animation, having hitbox enabled on specific frames.
 			#move sprite 12,-4 on faceright = true when false do -12,-4
 			#when animation is done, state = IDLE
@@ -83,5 +97,14 @@ func _on_hurtbox_area_entered(area):
 
 func _on_Stats_nohealth():
 	sprite.play("death")
+	$hitboxpivot/AttackBox/CollisionShape2D.disabled = true
 	velocity = Vector2.ZERO
 	state = DEAD
+
+func _on_AttackBox_body_entered(body):
+	state = ATTACK
+
+
+func _on_AttackBox_area_entered(area):
+	state = ATTACK
+	

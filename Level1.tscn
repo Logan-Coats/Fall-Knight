@@ -33,7 +33,7 @@ position = Vector2( 579.264, 139.912 )
 remote_path = NodePath("../../Camera2D")
 
 [node name="Skeleton" parent="." instance=ExtResource( 13 )]
-position = Vector2( 546.452, 137.425 )
+position = Vector2( 724.653, 66.0109 )
 
 [node name="Dungeon" parent="." instance=ExtResource( 1 )]
 

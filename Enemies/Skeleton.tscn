@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=2]
+[gd_scene load_steps=81 format=2]
 
 [ext_resource path="res://Skeleton/Sprite Sheets/Skeleton Attack.png" type="Texture" id=1]
 [ext_resource path="res://Skeleton/Sprite Sheets/Skeleton Hit.png" type="Texture" id=2]
@@ -303,6 +303,9 @@ animations = [ {
 "speed": 10.0
 } ]
 
+[sub_resource type="CircleShape2D" id=85]
+radius = 34.4444
+
 [sub_resource type="CapsuleShape2D" id=84]
 radius = 16.6314
 height = 213.794
@@ -323,12 +326,22 @@ shape = SubResource( 82 )
 scale = Vector2( 1.40418, 1.40497 )
 frames = SubResource( 63 )
 animation = "attack"
+frame = 6
 
 [node name="Stats" parent="." instance=ExtResource( 8 )]
 maxhealth = 3
 
 [node name="hitboxpivot" type="Position2D" parent="."]
 position = Vector2( 0, 2.64866 )
+
+[node name="AttackBox" type="Area2D" parent="hitboxpivot"]
+position = Vector2( 0, -2.64866 )
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitboxpivot/AttackBox"]
+position = Vector2( 22.9945, 2.64866 )
+shape = SubResource( 85 )
 
 [node name="hitbox" parent="hitboxpivot" instance=ExtResource( 6 )]
 position = Vector2( 0, -2.64866 )
@@ -352,6 +365,8 @@ collision_layer = 8
 position = Vector2( -7.25, 3 )
 shape = SubResource( 83 )
 [connection signal="nohealth" from="Stats" to="." method="_on_Stats_nohealth"]
+[connection signal="area_entered" from="hitboxpivot/AttackBox" to="." method="_on_AttackBox_area_entered"]
+[connection signal="body_entered" from="hitboxpivot/AttackBox" to="." method="_on_AttackBox_body_entered"]
 [connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]
 
 [editable path="hitboxpivot/hitbox"]
