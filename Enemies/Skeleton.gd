@@ -4,7 +4,7 @@ extends KinematicBody2D
 const FRICTION = 500
 const ACCELERATION = 500
 const MAX_SPEED = 50
-const GRAVITY = 400
+const GRAVITY = 1000
 
 enum{
 	IDLE,
@@ -23,6 +23,7 @@ onready var sprite = $Skeleton
 onready var hurtbox = $hurtbox
 onready var hitbox = $hitboxpivot/hitbox/collisionshape2d
 onready var playerdetectionzone = $PlayerDetectionZone
+onready var attackbox = $hitboxpivot/AttackBox/CollisionShape2D
 onready var hitboxpivot = $hitboxpivot
 
 func _physics_process(delta):
@@ -45,6 +46,7 @@ func _physics_process(delta):
 					accelerate_towards_point(player.global_position,delta)
 				else: state = IDLE
 		ATTACK:
+			velocity = Vector2.ZERO
 			if faceright:
 				sprite.position.x = 12
 				sprite.position.y = -4
@@ -56,7 +58,7 @@ func _physics_process(delta):
 				hitbox.disabled = false
 			else: hitbox.disabled = true
 			
-			if sprite.playing == false:
+			if sprite.frame == 17:
 				sprite.position.x = 0
 				sprite.position.y = 0
 				state = IDLE
@@ -97,14 +99,17 @@ func _on_hurtbox_area_entered(area):
 
 func _on_Stats_nohealth():
 	sprite.play("death")
-	$hitboxpivot/AttackBox/CollisionShape2D.disabled = true
+	hitbox.disabled = true
+	hurtbox.collisionshape.disabled = true
 	velocity = Vector2.ZERO
 	state = DEAD
 
 func _on_AttackBox_body_entered(body):
-	state = ATTACK
+	if state != DEAD && hurtbox.invincible == false:
+		state = ATTACK
 
 
 func _on_AttackBox_area_entered(area):
-	state = ATTACK
+	if state != DEAD && hurtbox.invincible == false:
+		state = ATTACK
 	
