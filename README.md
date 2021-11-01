@@ -3,6 +3,9 @@
 Created by Logan Coats
 
 
+
+Fall Knight is meant to feel like a castlevania-type of game, with a catch... you can slow your *fall* by attacking. With the addition of this mechanic, the heroing knight can cross any gap in his way! 
+
 # Credits
 
 ## Assets:
@@ -19,7 +22,7 @@ Created by Logan Coats
 
 -Input Prompts by [Kenney](https://kenney.nl)
  
-## Music:
+## Sounds:
 -Halloween music pack 2018 by [Sebastian Schwamm / Zebastian](https://zebby.itch.io/)
 
 
@@ -28,7 +31,11 @@ Created by Logan Coats
 
 
 
+-Death Sounds by [Exewin](https://opengameart.org/users/exewin)
 
+
+
+-8 Bit Death Whirl Sound by [Fupi](https://opengameart.org/users/fupi)
 ## Fonts: 
 -BitPotion by [Joe Brogers](https://joebrogers.itch.io)
 
@@ -62,3 +69,11 @@ Added "press any key to begin . . ." functionality for main menu.
 Set up player stats as a singleton.
 Changed collision layers and masks for proper collision.
 Added UI for health, still need to make health asset or find one.
+
+## Day Three
+Created 2 new enemies. the bat and the rat. 
+The bat is fully functional now, (maybe need to clean up its wander code) and the rat only needs its pseudo state machine setup with movement.
+Player now has hurt animation when interacting with enemy hitboxes, and when player dies, a prompt appears on screen to restart level or quit game. 
+Created asset for use with healtUI - did not import yet.
+Might use heartbeast's asset for enemy hit and death animations. - havent decided yet.
+Got death sounds but have not imported them yet.
