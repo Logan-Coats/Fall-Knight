@@ -21,25 +21,33 @@ onready var stats = $Stats
 onready var hurtbox = $hurtbox
 onready var playerdetectionzone = $PlayerDetectionZone
 
-func _ready():
-	pass
+
 
 func _physics_process(delta):
-	pass
+	knockback = knockback.move_toward(Vector2.ZERO, friction * delta)
+	knockback = move_and_slide(knockback)
+	match state:
+		IDLE:
+			velocity = Vector2.ZERO
+			velocity.move_toward(Vector2.ZERO, friction * delta)
+			seek_player()
+		CHASE:
+			var player = playerdetectionzone.player
+			if player != null:
+				accelerate_towards_point(player.global_position, delta)
+			else:
+				state = IDLE
+	velocity.y += gravity*delta
+	velocity = move_and_slide(velocity,Vector2.UP)
 
 func seek_player():
 	if playerdetectionzone.can_see_player():
 		state = CHASE
 
 func accelerate_towards_point(point,delta):
-	var direction = global_position.direction_to(point.x)
+	var direction = global_position.direction_to(point)
 	velocity = velocity.move_toward(direction * maxspeed, acceleration * delta)
 	sprite.flip_h = direction.x > 0
-
-func pick_random_state(state_list):
-	state_list.shuffle()
-	return state_list.pop_front()
-
 
 
 func _on_hurtbox_area_entered(area):
@@ -50,6 +58,6 @@ func _on_hurtbox_area_entered(area):
 
 func _on_Stats_nohealth():
 	queue_free()
-	var enemyDeathEffect # = EnemyDeathEffect.instance()
+	#var enemyDeathEffect # = EnemyDeathEffect.instance()
 	#get_parent().add_child(enemyDeathEffect)
 	#enemyDeathEffect.global_position = global_position
