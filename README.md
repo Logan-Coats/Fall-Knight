@@ -77,3 +77,12 @@ Player now has hurt animation when interacting with enemy hitboxes, and when pla
 Created asset for use with healtUI - did not import yet.
 Might use heartbeast's asset for enemy hit and death animations. - havent decided yet.
 Got death sounds but have not imported them yet.
+
+## Day Four
+Recreated Health UI assets and imported them.
+Health UI properly displays health.
+Finished rat movement, full implementation of rat complete.
+Rat can die. (only queue free for now, no animation yet.)
+Player can move before invincibility ends, player invincibility longer.
+Tomorrow will try to focus on making skeleton enemy, the first enemy to have an "attack" state. will be difficult.
+
