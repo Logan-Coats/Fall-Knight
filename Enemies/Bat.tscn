@@ -62,10 +62,11 @@ shape = SubResource( 1 )
 [node name="Bat" type="AnimatedSprite" parent="."]
 frames = SubResource( 6 )
 animation = "fly"
-frame = 1
+frame = 2
 playing = true
 
 [node name="Stats" parent="." instance=ExtResource( 2 )]
+maxhealth = 2
 
 [node name="hurtbox" parent="." instance=ExtResource( 4 )]
 collision_layer = 8

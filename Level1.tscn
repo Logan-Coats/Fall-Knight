@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://DungeonTileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://FallTileSet.tscn" type="PackedScene" id=2]
@@ -12,12 +12,13 @@
 [ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Restart.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Enemies/Rat.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Enemies/Skeleton.tscn" type="PackedScene" id=13]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 7 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 4 )]
-position = Vector2( 579.264, 136.241 )
+position = Vector2( 579.264, 139.912 )
 current = true
 zoom = Vector2( 0.5, 0.5 )
 script = ExtResource( 3 )
@@ -26,10 +27,13 @@ script = ExtResource( 3 )
 position = Vector2( 10000, 8000 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 579.264, 136.241 )
+position = Vector2( 579.264, 139.912 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
+
+[node name="Skeleton" parent="." instance=ExtResource( 13 )]
+position = Vector2( 546.452, 137.425 )
 
 [node name="Dungeon" parent="." instance=ExtResource( 1 )]
 
@@ -39,10 +43,10 @@ tile_data = PoolIntArray( 196630, 0, 65540, 196631, 0, 65540, 327695, 0, 65540, 
 [node name="Misc tiles" parent="." instance=ExtResource( 9 )]
 
 [node name="Rat" parent="." instance=ExtResource( 12 )]
-position = Vector2( 732.958, 138.353 )
+position = Vector2( 1088.8, 202.537 )
 
 [node name="Bat" parent="." instance=ExtResource( 10 )]
-position = Vector2( 772.089, 35.8672 )
+position = Vector2( 1100.56, 140.638 )
 
 [node name="FadeINOUT" parent="." instance=ExtResource( 8 )]
 
