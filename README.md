@@ -22,8 +22,11 @@ Fall Knight is meant to feel like a castlevania-type of game, with a catch... yo
 
 -generic skeletons by [Bit Life](https://bit-life.itch.io/)
 
+
 -Input Prompts by [Kenney](https://kenney.nl)
  
+ 
+ -Enemy Death Effect and Hit Effect from [HeartBeast](https://www.youtube.com/c/uheartbeast)'s godot action rpg tutorial -- could not find creator of asset.
 ## Sounds:
 -Halloween music pack 2018 by [Sebastian Schwamm / Zebastian](https://zebby.itch.io/)
 
@@ -88,3 +91,8 @@ Rat can die. (only queue free for now, no animation yet.)
 Player can move before invincibility ends, player invincibility longer.
 Tomorrow will try to focus on making skeleton enemy, the first enemy to have an "attack" state. will be difficult.
 
+## Day Five
+Created Skeleton
+Skeleton moves, takes damage, dies, and attacks when player is near.
+Will add maybe 1 or 2 more enemies OR 1 boss enemy for the final level.
+Want to start working on music and sound effects, as well as a hit/death effect. Then start work on level design and polish.

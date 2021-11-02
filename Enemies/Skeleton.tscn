@@ -319,6 +319,7 @@ collision_layer = 16
 script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( -7.25, 4.75 )
 shape = SubResource( 82 )
 
@@ -358,7 +359,6 @@ rotation = 1.5708
 shape = SubResource( 84 )
 
 [node name="hurtbox" parent="." instance=ExtResource( 7 )]
-visible = false
 collision_layer = 8
 
 [node name="CollisionShape2D" parent="hurtbox" index="0"]
