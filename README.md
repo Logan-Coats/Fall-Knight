@@ -36,11 +36,10 @@ Fall Knight is meant to feel like a castlevania-type of game, with a catch... yo
 
 
 
--Death Sounds by [Exewin](https://opengameart.org/users/exewin)
-
-
-
 -8 Bit Death Whirl Sound by [Fupi](https://opengameart.org/users/fupi)
+
+
+-8-Bit Game Sound Effects by [harvey656](https://harvey656.itch.io/)
 ## Fonts: 
 -BitPotion by [Joe Brogers](https://joebrogers.itch.io)
 
