@@ -88,3 +88,8 @@ Rat can die. (only queue free for now, no animation yet.)
 Player can move before invincibility ends, player invincibility longer.
 Tomorrow will try to focus on making skeleton enemy, the first enemy to have an "attack" state. will be difficult.
 
+## Day Five
+Created Skeleton
+Skeleton moves, takes damage, dies, and attacks when player is near.
+Will add maybe 1 or 2 more enemies OR 1 boss enemy for the final level.
+Want to start working on music and sound effects, as well as a hit/death effect. Then start work on level design and polish.
