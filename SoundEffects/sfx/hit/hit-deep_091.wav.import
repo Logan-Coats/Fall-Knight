@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/hit-deep_091.wav-3be1f84521d61e44f19358652f032510.sample"
+
+[deps]
+
+source_file="res://SoundEffects/sfx/hit/hit-deep_091.wav"
+dest_files=[ "res://.import/hit-deep_091.wav-3be1f84521d61e44f19358652f032510.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/hurt_209.wav-17cf616db03abb90f9f3237f2a2cabdb.sample"
+
+[deps]
+
+source_file="res://Enemies/sfx/hurt/hurt_209.wav"
+dest_files=[ "res://.import/hurt_209.wav-17cf616db03abb90f9f3237f2a2cabdb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/laser_086.wav-be15c334dcebb5341bb75d29ebc25f17.sample"
+
+[deps]
+
+source_file="res://SoundEffects/sfx/Laser/laser_086.wav"
+dest_files=[ "res://.import/laser_086.wav-be15c334dcebb5341bb75d29ebc25f17.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

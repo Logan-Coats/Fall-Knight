@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/jungle_08.wav-bb55e9f08ba5f01e367de2fd33ca0df0.sample"
+
+[deps]
+
+source_file="res://SoundEffects/sfx/jungle ambiance/jungle_08.wav"
+dest_files=[ "res://.import/jungle_08.wav-bb55e9f08ba5f01e367de2fd33ca0df0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

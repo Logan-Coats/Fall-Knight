@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Drum_snare_49.wav-a097dca3b1d8a1f4a2b94daed30e172c.sample"
+
+[deps]
+
+source_file="res://SoundEffects/sfx/Drum/Drum_snare_49.wav"
+dest_files=[ "res://.import/Drum_snare_49.wav-a097dca3b1d8a1f4a2b94daed30e172c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

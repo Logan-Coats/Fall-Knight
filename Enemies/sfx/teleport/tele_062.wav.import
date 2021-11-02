@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/tele_062.wav-96e9ed38533058c937b5617667a8a113.sample"
+
+[deps]
+
+source_file="res://Enemies/sfx/teleport/tele_062.wav"
+dest_files=[ "res://.import/tele_062.wav-96e9ed38533058c937b5617667a8a113.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/2_03.wav-9997c9dbc95ef3b4cb455a96358c4a1a.sample"
+
+[deps]
+
+source_file="res://Enemies/sfx/2_03.wav"
+dest_files=[ "res://.import/2_03.wav-9997c9dbc95ef3b4cb455a96358c4a1a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

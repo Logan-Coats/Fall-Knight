@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/explosion_quick_07.wav-285b3cc719e33e0b3c89adcbd8ecb8c8.sample"
+
+[deps]
+
+source_file="res://Enemies/sfx/Explosion/explosion_quick_07.wav"
+dest_files=[ "res://.import/explosion_quick_07.wav-285b3cc719e33e0b3c89adcbd8ecb8c8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

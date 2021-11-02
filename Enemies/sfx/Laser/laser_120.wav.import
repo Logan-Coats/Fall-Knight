@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/laser_120.wav-77ce34bf924e6f4a709d9e45882ed553.sample"
+
+[deps]
+
+source_file="res://Enemies/sfx/Laser/laser_120.wav"
+dest_files=[ "res://.import/laser_120.wav-77ce34bf924e6f4a709d9e45882ed553.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

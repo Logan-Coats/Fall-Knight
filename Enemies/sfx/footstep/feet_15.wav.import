@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/feet_15.wav-8e8d5aa11955119b1397c172c1e3150d.sample"
+
+[deps]
+
+source_file="res://Enemies/sfx/footstep/feet_15.wav"
+dest_files=[ "res://.import/feet_15.wav-8e8d5aa11955119b1397c172c1e3150d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

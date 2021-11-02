@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/CC_007.wav-1013b19a32c169b130f7a3e0b1956486.sample"
+
+[deps]
+
+source_file="res://Enemies/sfx/Creature - Creepy/CC_007.wav"
+dest_files=[ "res://.import/CC_007.wav-1013b19a32c169b130f7a3e0b1956486.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

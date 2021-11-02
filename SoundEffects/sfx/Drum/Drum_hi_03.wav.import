@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Drum_hi_03.wav-c4fc9087285a68284cb02f19a30558bc.sample"
+
+[deps]
+
+source_file="res://SoundEffects/sfx/Drum/Drum_hi_03.wav"
+dest_files=[ "res://.import/Drum_hi_03.wav-c4fc9087285a68284cb02f19a30558bc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/explosion_big_32.wav-92b516cf71fc342a466731fb0e082234.sample"
+
+[deps]
+
+source_file="res://SoundEffects/sfx/Explosion/explosion_big_32.wav"
+dest_files=[ "res://.import/explosion_big_32.wav-92b516cf71fc342a466731fb0e082234.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

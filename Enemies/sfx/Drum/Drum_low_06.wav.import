@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Drum_low_06.wav-066da9523f1e7a5808b3e31a192ff097.sample"
+
+[deps]
+
+source_file="res://Enemies/sfx/Drum/Drum_low_06.wav"
+dest_files=[ "res://.import/Drum_low_06.wav-066da9523f1e7a5808b3e31a192ff097.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/magic_093.wav-ef8c1a565678fb0b109353d443978fa8.sample"
+
+[deps]
+
+source_file="res://SoundEffects/sfx/magic/magic_093.wav"
+dest_files=[ "res://.import/magic_093.wav-ef8c1a565678fb0b109353d443978fa8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

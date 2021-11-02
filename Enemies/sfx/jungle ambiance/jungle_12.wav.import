@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/jungle_12.wav-8139d8673a72178da19b5971b4c56229.sample"
+
+[deps]
+
+source_file="res://Enemies/sfx/jungle ambiance/jungle_12.wav"
+dest_files=[ "res://.import/jungle_12.wav-8139d8673a72178da19b5971b4c56229.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

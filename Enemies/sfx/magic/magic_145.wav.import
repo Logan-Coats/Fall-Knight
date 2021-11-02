@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/magic_145.wav-ff76a3bfa9426acda094af8af1a85be9.sample"
+
+[deps]
+
+source_file="res://Enemies/sfx/magic/magic_145.wav"
+dest_files=[ "res://.import/magic_145.wav-ff76a3bfa9426acda094af8af1a85be9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

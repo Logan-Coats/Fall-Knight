@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/CCA_143.wav-c1e361cb59d680c5ca88ac75b72623ff.sample"
+
+[deps]
+
+source_file="res://SoundEffects/sfx/creature-animal/CCA_143.wav"
+dest_files=[ "res://.import/CCA_143.wav-c1e361cb59d680c5ca88ac75b72623ff.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

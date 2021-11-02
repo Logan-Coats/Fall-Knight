@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/CC_080.wav-0b63e4f31bf0c1d6d7c6efeea6f22a75.sample"
+
+[deps]
+
+source_file="res://SoundEffects/sfx/Creature - Creepy/CC_080.wav"
+dest_files=[ "res://.import/CC_080.wav-0b63e4f31bf0c1d6d7c6efeea6f22a75.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

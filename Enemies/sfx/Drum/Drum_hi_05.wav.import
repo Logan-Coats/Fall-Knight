@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Drum_hi_05.wav-a4677a3f57ae903746c2ff0707727782.sample"
+
+[deps]
+
+source_file="res://Enemies/sfx/Drum/Drum_hi_05.wav"
+dest_files=[ "res://.import/Drum_hi_05.wav-a4677a3f57ae903746c2ff0707727782.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/CCS_36.wav-b5df8a6bfdab8f425788fa711e89be3a.sample"
+
+[deps]
+
+source_file="res://Enemies/sfx/Creature-small/CCS_36.wav"
+dest_files=[ "res://.import/CCS_36.wav-b5df8a6bfdab8f425788fa711e89be3a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

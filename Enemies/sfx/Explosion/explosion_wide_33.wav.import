@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/explosion_wide_33.wav-35aff5947b9161ae98ef97287804dde8.sample"
+
+[deps]
+
+source_file="res://Enemies/sfx/Explosion/explosion_wide_33.wav"
+dest_files=[ "res://.import/explosion_wide_33.wav-35aff5947b9161ae98ef97287804dde8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

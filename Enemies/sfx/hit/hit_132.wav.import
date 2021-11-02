@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/hit_132.wav-1771a5626d6780c0c914551ce1b2df9c.sample"
+
+[deps]
+
+source_file="res://Enemies/sfx/hit/hit_132.wav"
+dest_files=[ "res://.import/hit_132.wav-1771a5626d6780c0c914551ce1b2df9c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

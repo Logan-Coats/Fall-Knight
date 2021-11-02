@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/EL-blow_09.wav-d15bc65b1f3b69f867b661607e9b6a5c.sample"
+
+[deps]
+
+source_file="res://SoundEffects/sfx/electrical/EL-blow_09.wav"
+dest_files=[ "res://.import/EL-blow_09.wav-d15bc65b1f3b69f867b661607e9b6a5c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

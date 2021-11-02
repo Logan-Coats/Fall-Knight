@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/metal_074.wav-b1115d576e12f0ba8699408d787b391b.sample"
+
+[deps]
+
+source_file="res://SoundEffects/sfx/Metal/metal_074.wav"
+dest_files=[ "res://.import/metal_074.wav-b1115d576e12f0ba8699408d787b391b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

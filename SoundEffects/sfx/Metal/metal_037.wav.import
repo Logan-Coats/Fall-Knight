@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/metal_037.wav-ed33bead27d37eb596be45a41a42b900.sample"
+
+[deps]
+
+source_file="res://SoundEffects/sfx/Metal/metal_037.wav"
+dest_files=[ "res://.import/metal_037.wav-ed33bead27d37eb596be45a41a42b900.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/hit-deep_048.wav-f3a5c898702019e2de6c22e13db0817b.sample"
+
+[deps]
+
+source_file="res://Enemies/sfx/hit/hit-deep_048.wav"
+dest_files=[ "res://.import/hit-deep_048.wav-f3a5c898702019e2de6c22e13db0817b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/PP_UP_45.wav-46065f7eae2bfe4f96c9806a8774bbdb.sample"
+
+[deps]
+
+source_file="res://Enemies/sfx/Power/PP_UP_45.wav"
+dest_files=[ "res://.import/PP_UP_45.wav-46065f7eae2bfe4f96c9806a8774bbdb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

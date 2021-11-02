@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/metal_055.wav-0d7c3c4c885530c0747866d8ab260182.sample"
+
+[deps]
+
+source_file="res://Enemies/sfx/Metal/metal_055.wav"
+dest_files=[ "res://.import/metal_055.wav-0d7c3c4c885530c0747866d8ab260182.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

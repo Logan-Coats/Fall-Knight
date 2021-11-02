@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/explosion_echo_14.wav-c521d3e4fe6c0c49f3f0c1a2faf3fe0f.sample"
+
+[deps]
+
+source_file="res://Enemies/sfx/Explosion/explosion_echo_14.wav"
+dest_files=[ "res://.import/explosion_echo_14.wav-c521d3e4fe6c0c49f3f0c1a2faf3fe0f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

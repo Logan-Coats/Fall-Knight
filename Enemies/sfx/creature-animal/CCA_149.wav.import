@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/CCA_149.wav-2d46be43f8001d90d3c0adfcd38b0edc.sample"
+
+[deps]
+
+source_file="res://Enemies/sfx/creature-animal/CCA_149.wav"
+dest_files=[ "res://.import/CCA_149.wav-2d46be43f8001d90d3c0adfcd38b0edc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

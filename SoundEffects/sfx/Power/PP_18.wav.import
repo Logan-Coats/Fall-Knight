@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/PP_18.wav-633e8be1a74c5d8057ce5510383abb3b.sample"
+
+[deps]
+
+source_file="res://SoundEffects/sfx/Power/PP_18.wav"
+dest_files=[ "res://.import/PP_18.wav-633e8be1a74c5d8057ce5510383abb3b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

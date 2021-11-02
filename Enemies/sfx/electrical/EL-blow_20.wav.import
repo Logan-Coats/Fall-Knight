@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/EL-blow_20.wav-3fff95424af85e6c1220598c11c5ccea.sample"
+
+[deps]
+
+source_file="res://Enemies/sfx/electrical/EL-blow_20.wav"
+dest_files=[ "res://.import/EL-blow_20.wav-3fff95424af85e6c1220598c11c5ccea.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

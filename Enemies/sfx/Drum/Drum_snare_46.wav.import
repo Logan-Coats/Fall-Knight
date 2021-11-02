@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Drum_snare_46.wav-a7c27b5e3cbcb49917d6bacf8b73e284.sample"
+
+[deps]
+
+source_file="res://Enemies/sfx/Drum/Drum_snare_46.wav"
+dest_files=[ "res://.import/Drum_snare_46.wav-a7c27b5e3cbcb49917d6bacf8b73e284.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Alarm_30.wav-935708ff7148bb6ac24562e8833b3a1f.sample"
+
+[deps]
+
+source_file="res://SoundEffects/sfx/Alarm/Alarm_30.wav"
+dest_files=[ "res://.import/Alarm_30.wav-935708ff7148bb6ac24562e8833b3a1f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/tele_119.wav-805392c192b3e3c698876e973987b51a.sample"
+
+[deps]
+
+source_file="res://SoundEffects/sfx/teleport/tele_119.wav"
+dest_files=[ "res://.import/tele_119.wav-805392c192b3e3c698876e973987b51a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

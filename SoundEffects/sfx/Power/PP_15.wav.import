@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/PP_15.wav-963e436543f3c30b32f10c9d5e1e69be.sample"
+
+[deps]
+
+source_file="res://SoundEffects/sfx/Power/PP_15.wav"
+dest_files=[ "res://.import/PP_15.wav-963e436543f3c30b32f10c9d5e1e69be.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

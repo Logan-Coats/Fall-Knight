@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Alarm_19.wav-38808b4a9b427b532c01e1da6e06daf1.sample"
+
+[deps]
+
+source_file="res://Enemies/sfx/Alarm/Alarm_19.wav"
+dest_files=[ "res://.import/Alarm_19.wav-38808b4a9b427b532c01e1da6e06daf1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/menu_150.wav-31f82f4e5d843bc94a1d226d2b1eac9e.sample"
+
+[deps]
+
+source_file="res://SoundEffects/sfx/menu/menu_150.wav"
+dest_files=[ "res://.import/menu_150.wav-31f82f4e5d843bc94a1d226d2b1eac9e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

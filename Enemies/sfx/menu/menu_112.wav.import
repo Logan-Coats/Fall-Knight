@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/menu_112.wav-989d51d61e37d154dcd75632099d15b4.sample"
+
+[deps]
+
+source_file="res://Enemies/sfx/menu/menu_112.wav"
+dest_files=[ "res://.import/menu_112.wav-989d51d61e37d154dcd75632099d15b4.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

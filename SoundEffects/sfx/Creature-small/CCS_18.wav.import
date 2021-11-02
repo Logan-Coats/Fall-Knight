@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/CCS_18.wav-e01b65d4ebdae2134ffdb92866c6c091.sample"
+
+[deps]
+
+source_file="res://SoundEffects/sfx/Creature-small/CCS_18.wav"
+dest_files=[ "res://.import/CCS_18.wav-e01b65d4ebdae2134ffdb92866c6c091.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

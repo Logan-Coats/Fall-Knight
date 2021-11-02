@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/hurt_057.wav-279aafaf4e8e7a0f9b0ca688cad55585.sample"
+
+[deps]
+
+source_file="res://SoundEffects/sfx/hurt/hurt_057.wav"
+dest_files=[ "res://.import/hurt_057.wav-279aafaf4e8e7a0f9b0ca688cad55585.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
