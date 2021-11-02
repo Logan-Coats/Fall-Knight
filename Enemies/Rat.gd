@@ -30,8 +30,10 @@ func _physics_process(delta):
 		IDLE:
 			velocity = Vector2.ZERO
 			velocity.move_toward(Vector2.ZERO, friction * delta)
+			sprite.stop()
 			seek_player()
 		CHASE:
+			sprite.play("default")
 			var player = playerdetectionzone.player
 			if player != null:
 				accelerate_towards_point(player.global_position, delta)

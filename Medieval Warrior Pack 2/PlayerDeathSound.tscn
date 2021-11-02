@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Medieval Warrior Pack 2/PlayerDeathSound.gd" type="Script" id=1]
+[ext_resource path="res://SoundEffects/vgdeathsound.wav" type="AudioStream" id=2]
+
+[node name="PlayerDeathSound" type="AudioStreamPlayer"]
+stream = ExtResource( 2 )
+autoplay = true
+script = ExtResource( 1 )
+[connection signal="finished" from="." to="." method="_on_PlayerDeathSound_finished"]

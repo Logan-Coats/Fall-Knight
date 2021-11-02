@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+const PlayerDeathSound = preload("res://Medieval Warrior Pack 2/PlayerDeathSound.tscn")
+
 const FRICTION = 500
 const ACCELERATION = 500
 const MAX_SPEED = 120
@@ -74,5 +76,8 @@ func _on_hurtbox_area_entered(area):
 	velocity.x = 0
 	velocity = move_and_slide(velocity,Vector2.UP)
 	hurtbox.start_invincibility(2)
+	if stats.health == 0:
+		var playerdeathsound = PlayerDeathSound.instance()
+		get_tree().current_scene.add_child(playerdeathsound)
 
 

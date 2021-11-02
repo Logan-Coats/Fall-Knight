@@ -52,42 +52,42 @@ region = Rect2( 1050, 900, 150, 150 )
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 150, 150 )
+region = Rect2( 0, 1350, 150, 150 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 150, 0, 150, 150 )
+region = Rect2( 150, 1350, 150, 150 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 300, 0, 150, 150 )
+region = Rect2( 300, 1350, 150, 150 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 450, 0, 150, 150 )
+region = Rect2( 450, 1350, 150, 150 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 1350, 150, 150 )
+region = Rect2( 0, 0, 150, 150 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 150, 1350, 150, 150 )
+region = Rect2( 150, 0, 150, 150 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 300, 1350, 150, 150 )
+region = Rect2( 300, 0, 150, 150 )
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 450, 1350, 150, 150 )
+region = Rect2( 450, 0, 150, 150 )
 
 [sub_resource type="AtlasTexture" id=18]
 flags = 4
@@ -132,52 +132,52 @@ region = Rect2( 150, 1050, 150, 150 )
 [sub_resource type="AtlasTexture" id=26]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 750, 150, 150 )
+region = Rect2( 0, 1200, 150, 150 )
 
 [sub_resource type="AtlasTexture" id=27]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 150, 750, 150, 150 )
+region = Rect2( 150, 1200, 150, 150 )
 
 [sub_resource type="AtlasTexture" id=28]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 1200, 150, 150 )
+region = Rect2( 300, 1200, 150, 150 )
 
 [sub_resource type="AtlasTexture" id=29]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 150, 1200, 150, 150 )
+region = Rect2( 450, 1200, 150, 150 )
 
 [sub_resource type="AtlasTexture" id=30]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 300, 1200, 150, 150 )
+region = Rect2( 600, 1200, 150, 150 )
 
 [sub_resource type="AtlasTexture" id=31]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 450, 1200, 150, 150 )
+region = Rect2( 750, 1200, 150, 150 )
 
 [sub_resource type="AtlasTexture" id=32]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 600, 1200, 150, 150 )
+region = Rect2( 900, 1200, 150, 150 )
 
 [sub_resource type="AtlasTexture" id=33]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 750, 1200, 150, 150 )
+region = Rect2( 1050, 1200, 150, 150 )
 
 [sub_resource type="AtlasTexture" id=34]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 900, 1200, 150, 150 )
+region = Rect2( 0, 750, 150, 150 )
 
 [sub_resource type="AtlasTexture" id=35]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 1050, 1200, 150, 150 )
+region = Rect2( 150, 750, 150, 150 )
 
 [sub_resource type="SpriteFrames" id=36]
 animations = [ {
@@ -188,13 +188,13 @@ animations = [ {
 }, {
 "frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
 "loop": false,
-"name": "attack",
-"speed": 10.0
+"name": "hurt",
+"speed": 8.0
 }, {
 "frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
 "loop": false,
-"name": "hurt",
-"speed": 8.0
+"name": "attack",
+"speed": 10.0
 }, {
 "frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ) ],
 "loop": false,
@@ -206,15 +206,15 @@ animations = [ {
 "name": "jump",
 "speed": 4.0
 }, {
-"frames": [ SubResource( 26 ), SubResource( 27 ) ],
-"loop": true,
-"name": "falling",
-"speed": 4.0
-}, {
-"frames": [ SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ) ],
+"frames": [ SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ) ],
 "loop": true,
 "name": "running",
 "speed": 12.0
+}, {
+"frames": [ SubResource( 34 ), SubResource( 35 ) ],
+"loop": true,
+"name": "falling",
+"speed": 4.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=37]
@@ -240,6 +240,8 @@ animation = "idle"
 
 [node name="CollisionShape2D" parent="hurtbox" index="0"]
 shape = SubResource( 37 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 [connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]
 
 [editable path="hitboxpivot/hitbox"]
