@@ -26,7 +26,7 @@ Fall Knight is meant to feel like a castlevania-type of game, with a catch... yo
 -Input Prompts by [Kenney](https://kenney.nl)
  
  
- -Enemy Death Effect and Hit Effect from [HeartBeast](https://www.youtube.com/c/uheartbeast)
+ -Enemy Death Effect and Hit Effect from [HeartBeast](https://www.youtube.com/c/uheartbeast)'s godot action rpg tutorial -- could not find creator of asset.
 ## Sounds:
 -Halloween music pack 2018 by [Sebastian Schwamm / Zebastian](https://zebby.itch.io/)
 
