@@ -1,5 +1,7 @@
 extends Area2D
 
+const HitEffect = preload("res://Hit Effect/HitEffect.tscn")
+
 onready var timer = $Timer
 onready var timer2 = $Timer2
 onready var collisionshape = $CollisionShape2D
@@ -36,4 +38,10 @@ func _on_hurtbox_invincibility_start():
 
 func _on_Timer2_timeout():
 	moveable = true
+
+func create_hit_effect():
+	var effect = HitEffect.instance()
+	var main = get_tree().current_scene
+	main.add_child(effect)
+	effect.global_position = global_position
 

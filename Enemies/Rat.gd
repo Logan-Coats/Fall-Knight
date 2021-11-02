@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-#death effect preload here
+const EnemyDeathEffect = preload("res://Hit Effect/DeathEffect.tscn")
 
 enum{
 	IDLE,
@@ -53,11 +53,10 @@ func accelerate_towards_point(point,delta):
 func _on_hurtbox_area_entered(area):
 	stats.health -= area.damage
 	knockback = area.knockbackvector * 120
-	#hit effect
-	#hurtbox.create_hit_effect()
+	hurtbox.create_hit_effect()
 
 func _on_Stats_nohealth():
 	queue_free()
-	#var enemyDeathEffect # = EnemyDeathEffect.instance()
-	#get_parent().add_child(enemyDeathEffect)
-	#enemyDeathEffect.global_position = global_position
+	var enemyDeathEffect  = EnemyDeathEffect.instance()
+	get_parent().add_child(enemyDeathEffect)
+	enemyDeathEffect.global_position = global_position

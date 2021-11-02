@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+const EnemyDeathEffect = preload("res://Hit Effect/DeathEffect.tscn")
 
 const FRICTION = 500
 const ACCELERATION = 500
@@ -25,6 +26,7 @@ onready var hitbox = $hitboxpivot/hitbox/collisionshape2d
 onready var playerdetectionzone = $PlayerDetectionZone
 onready var attackbox = $hitboxpivot/AttackBox/CollisionShape2D
 onready var hitboxpivot = $hitboxpivot
+onready var afterdeathtimer = $afterdeathtimer
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION*delta)
@@ -46,33 +48,28 @@ func _physics_process(delta):
 					accelerate_towards_point(player.global_position,delta)
 				else: state = IDLE
 		ATTACK:
-			velocity = Vector2.ZERO
-			if faceright:
-				sprite.position.x = 12
-				sprite.position.y = -4
-			else:
-				sprite.position.x = -12
-				sprite.position.y = -4
-			sprite.play("attack")
-			if sprite.frame == 6 ||sprite.frame == 7 ||sprite.frame == 8 ||sprite.frame == 9:
-				hitbox.disabled = false
-			else: hitbox.disabled = true
-			
-			if sprite.frame == 17:
-				sprite.position.x = 0
-				sprite.position.y = 0
-				state = IDLE
-			#play attack animation, having hitbox enabled on specific frames.
-			#move sprite 12,-4 on faceright = true when false do -12,-4
-			#when animation is done, state = IDLE
-			#move sprite back to 0,0
+			if hurtbox.invincible == false:
+				velocity = Vector2.ZERO
+				if faceright:
+					sprite.position.x = 12
+					sprite.position.y = -4
+				else:
+					sprite.position.x = -12
+					sprite.position.y = -4
+				sprite.play("attack")
+				if sprite.frame == 6 ||sprite.frame == 7 ||sprite.frame == 8 ||sprite.frame == 9:
+					hitbox.disabled = false
+				else: hitbox.disabled = true
+				
+				if sprite.frame == 17:
+					sprite.position.x = 0
+					sprite.position.y = 0
+					state = IDLE
 		DEAD:
 			pass
-			#do nothing, or when animation ends, enemy death effect
+			#do nothing
 	velocity.y += GRAVITY*delta
 	velocity = move_and_slide(velocity, Vector2.UP)
-	
-
 
 func seek_player():
 	if playerdetectionzone.can_see_player():
@@ -94,22 +91,25 @@ func _on_hurtbox_area_entered(area):
 	velocity.x = 0
 	velocity = move_and_slide(velocity, Vector2.UP)
 	hurtbox.start_invincibility(1)
-	#hit effect
-	#hurtbox.create_hurt_effect()
 
 func _on_Stats_nohealth():
 	sprite.play("death")
-	hitbox.disabled = true
-	hurtbox.collisionshape.disabled = true
+	hitbox.set_deferred("disabled",true)
+	hurtbox.collisionshape.set_deferred("disabled",true)
 	velocity = Vector2.ZERO
 	state = DEAD
+	afterdeathtimer.start(5)
 
 func _on_AttackBox_body_entered(body):
 	if state != DEAD && hurtbox.invincible == false:
 		state = ATTACK
 
-
 func _on_AttackBox_area_entered(area):
 	if state != DEAD && hurtbox.invincible == false:
 		state = ATTACK
-	
+
+func _on_afterdeathtimer_timeout():
+	queue_free()
+	var enemyDeathEffect  = EnemyDeathEffect.instance()
+	get_parent().add_child(enemyDeathEffect)
+	enemyDeathEffect.global_position = playerdetectionzone.global_position
