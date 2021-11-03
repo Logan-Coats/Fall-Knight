@@ -27,6 +27,10 @@ Fall Knight is meant to feel like a castlevania-type of game, with a catch... yo
  
  
  -Enemy Death Effect and Hit Effect from [HeartBeast](https://www.youtube.com/c/uheartbeast)'s godot action rpg tutorial -- could not find creator of asset.
+ 
+ 
+ 
+ -Undead Executioner by [Kronovi](https://darkpixel-kronovi.itch.io/)
 ## Sounds:
 -Halloween music pack 2018 by [Sebastian Schwamm / Zebastian](https://zebby.itch.io/)
 
