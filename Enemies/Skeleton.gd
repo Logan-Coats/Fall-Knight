@@ -1,6 +1,8 @@
 extends KinematicBody2D
 
 const EnemyDeathEffect = preload("res://Hit Effect/DeathEffect.tscn")
+const EnemyDeathSound = preload("res://Enemies/EnemyDeathSound.tscn")
+const SkeletonHurtSound = preload("res://Enemies/SkeletonHurtSound.tscn")
 
 const FRICTION = 500
 const ACCELERATION = 500
@@ -88,6 +90,8 @@ func _on_hurtbox_area_entered(area):
 	sprite.play("hurt")
 	stats.health -= area.damage 
 	knockback = area.knockbackvector * 120
+	var skeletonhurtsound = SkeletonHurtSound.instance()
+	get_tree().current_scene.add_child(skeletonhurtsound)
 	velocity.x = 0
 	velocity = move_and_slide(velocity, Vector2.UP)
 	hurtbox.start_invincibility(1)
@@ -110,6 +114,8 @@ func _on_AttackBox_area_entered(area):
 
 func _on_afterdeathtimer_timeout():
 	queue_free()
+	var enemydeathsound = EnemyDeathSound.instance()
+	get_tree().current_scene.add_child(enemydeathsound)
 	var enemyDeathEffect  = EnemyDeathEffect.instance()
 	get_parent().add_child(enemyDeathEffect)
 	enemyDeathEffect.global_position = playerdetectionzone.global_position

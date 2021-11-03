@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 const EnemyDeathEffect = preload("res://Hit Effect/DeathEffect.tscn")
+const EnemyDeathSound = preload("res://Enemies/EnemyDeathSound.tscn")
 
 enum{
 	IDLE,
@@ -14,7 +15,7 @@ var state = CHASE
 export var acceleration = 300
 export var maxspeed = 90
 export var friction = 200
-export var gravity = 300
+export var gravity = 1000
 
 onready var sprite = $AnimatedSprite
 onready var stats = $Stats
@@ -40,7 +41,7 @@ func _physics_process(delta):
 			else:
 				state = IDLE
 	velocity.y += gravity*delta
-	velocity = move_and_slide(velocity,Vector2.UP)
+	velocity = move_and_slide(velocity, Vector2.DOWN)
 
 func seek_player():
 	if playerdetectionzone.can_see_player():
@@ -59,6 +60,13 @@ func _on_hurtbox_area_entered(area):
 
 func _on_Stats_nohealth():
 	queue_free()
+	var enemydeathsound = EnemyDeathSound.instance()
+	get_tree().current_scene.add_child(enemydeathsound)
 	var enemyDeathEffect  = EnemyDeathEffect.instance()
 	get_parent().add_child(enemyDeathEffect)
 	enemyDeathEffect.global_position = global_position
+
+
+func _on_PlayerDetectionZone_body_exited(body):
+	sprite.frame = 0
+	velocity = velocity.move_toward(Vector2.ZERO, acceleration*friction)

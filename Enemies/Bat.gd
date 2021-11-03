@@ -1,6 +1,9 @@
 extends KinematicBody2D
 
 const EnemyDeathEffect = preload("res://Hit Effect/DeathEffect.tscn")
+const EnemyDeathSound = preload("res://Enemies/EnemyDeathSound.tscn")
+const BatHurtSound = preload("res://Enemies/BatHurtSound.tscn")
+
 
 enum{
 	IDLE,
@@ -70,10 +73,15 @@ func pick_random_state(state_list):
 func _on_hurtbox_area_entered(area):
 	stats.health -= area.damage
 	knockback = area.knockbackvector * 120
+	
+	var bathurtsound = BatHurtSound.instance()
+	get_tree().current_scene.add_child(bathurtsound)
 	hurtbox.create_hit_effect()
 
 func _on_Stats_nohealth():
 	queue_free()
+	var enemydeathsound = EnemyDeathSound.instance()
+	get_tree().current_scene.add_child(enemydeathsound)
 	var enemyDeathEffect  = EnemyDeathEffect.instance()
 	get_parent().add_child(enemyDeathEffect)
 	enemyDeathEffect.global_position = global_position

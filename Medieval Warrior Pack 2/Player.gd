@@ -1,6 +1,8 @@
 extends KinematicBody2D
 
 const PlayerDeathSound = preload("res://Medieval Warrior Pack 2/PlayerDeathSound.tscn")
+const PlayerHurtSound = preload("res://Medieval Warrior Pack 2/PlayerHurtSound.tscn")
+const hitsound = preload("res://Enemies/HitSound.tscn")
 
 const FRICTION = 500
 const ACCELERATION = 500
@@ -12,6 +14,7 @@ var velocity = Vector2.ZERO
 var stats = PlayerStats
 
 signal dead
+signal hitboxon
 
 onready var animp = $AnimatedSprite
 
@@ -57,6 +60,7 @@ func _process(delta):
 			animp.play("attack")
 			if(animp.frame == 1 || animp.frame == 2):
 				swordhitbox.disabled = false
+				emit_signal("hitboxon")
 			else:
 				swordhitbox.disabled = true
 			velocity = velocity/1.25
@@ -79,5 +83,13 @@ func _on_hurtbox_area_entered(area):
 	if stats.health == 0:
 		var playerdeathsound = PlayerDeathSound.instance()
 		get_tree().current_scene.add_child(playerdeathsound)
+	else:
+		var playerhurtsound = PlayerHurtSound.instance()
+		get_tree().current_scene.add_child(playerhurtsound)
 
 
+
+
+func _on_Player_hitboxon():
+	var Hitsound = hitsound.instance()
+	get_tree().current_scene.add_child(Hitsound)

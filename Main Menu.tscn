@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Middle.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://BitPotionExt.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Main Menu.gd" type="Script" id=3]
 [ext_resource path="res://FadeINOUT.tscn" type="PackedScene" id=4]
+[ext_resource path="res://music/lost1.2_wav/Anormal - calming - ambient.wav" type="AudioStream" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 140
@@ -58,6 +59,10 @@ __meta__ = {
 [node name="FadeINOUT" parent="." instance=ExtResource( 4 )]
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
 [editable path="FadeINOUT"]

@@ -1,5 +1,7 @@
 extends Control
 
+onready var music = $AudioStreamPlayer
+
 func _ready():
 	$FadeINOUT/AnimationPlayer.play("fade in")
 
@@ -10,4 +12,5 @@ func _input(event):
 
 
 func _on_Timer_timeout():
+	music.stop()
 	get_tree().change_scene("res://Level1.tscn")

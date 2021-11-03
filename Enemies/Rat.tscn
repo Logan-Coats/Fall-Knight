@@ -83,6 +83,7 @@ collision_layer = 8
 position = Vector2( 0, 8 )
 rotation = 1.5708
 [connection signal="nohealth" from="Stats" to="." method="_on_Stats_nohealth"]
+[connection signal="body_exited" from="PlayerDetectionZone" to="." method="_on_PlayerDetectionZone_body_exited"]
 [connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]
 
 [editable path="PlayerDetectionZone"]
