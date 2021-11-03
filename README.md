@@ -99,3 +99,17 @@ Created Skeleton
 Skeleton moves, takes damage, dies, and attacks when player is near.
 Will add maybe 1 or 2 more enemies OR 1 boss enemy for the final level.
 Want to start working on music and sound effects, as well as a hit/death effect. Then start work on level design and polish.
+
+## Day Six
+Created Input prompts. 
+Added many assets including sfx and such.
+Added death sound for player.
+Added hit and death effects for enemies.
+
+## Day Seven
+Halfway there...
+Implemented sfx for hit/hurt in player and enemies.
+Implemented music and added 2 more scenes for levels.
+Created scene transitions between levels.
+Added assets for boss enemy. Will hopefully implement boss soon. 
+Will probably begin working on level design tomorrow. Shaping up to be good!!
