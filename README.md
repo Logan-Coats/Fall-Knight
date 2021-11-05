@@ -113,3 +113,6 @@ Implemented music and added 2 more scenes for levels.
 Created scene transitions between levels.
 Added assets for boss enemy. Will hopefully implement boss soon. 
 Will probably begin working on level design tomorrow. Shaping up to be good!!
+
+## Day Eight
+Took a day off from this project to focus on schoolwork, it had been piling up.
