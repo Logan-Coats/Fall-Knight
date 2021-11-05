@@ -31,6 +31,9 @@ Fall Knight is meant to feel like a castlevania-type of game, with a catch... yo
  
  
  -Undead Executioner by [Kronovi](https://darkpixel-kronovi.itch.io/)
+ 
+ 
+ -Autumn Birches tileset by [popcornflood](https://popcornflood.itch.io/)
 ## Sounds:
 -Halloween music pack 2018 by [Sebastian Schwamm / Zebastian](https://zebby.itch.io/)
 
