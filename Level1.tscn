@@ -1,9 +1,7 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://DungeonTileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://FallTileSet.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Camera.gd" type="Script" id=3]
-[ext_resource path="res://Camera.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Medieval Warrior Pack 2/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://HealthUI.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Level1.gd" type="Script" id=7]
@@ -87,18 +85,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Camera2D" parent="." instance=ExtResource( 4 )]
-position = Vector2( 61.1866, 74.2253 )
-current = true
-zoom = Vector2( 0.5, 0.5 )
-script = ExtResource( 3 )
-
-[node name="topleft" parent="Camera2D/limits" index="0"]
-position = Vector2( 0, -256 )
-
-[node name="bottomright" parent="Camera2D/limits" index="1"]
-position = Vector2( 10000, 8000 )
-
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 61.1866, 74.2253 )
 
@@ -159,9 +145,9 @@ shape = SubResource( 1 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 
-[editable path="Camera2D"]
-
 [editable path="Player"]
+
+[editable path="Player/Camera2D"]
 
 [editable path="FadeINOUT"]
 

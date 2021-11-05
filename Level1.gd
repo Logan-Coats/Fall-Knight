@@ -12,6 +12,9 @@ func _ready():
 	PlayerStats.health = playerhealth
 	music.play()
 
+func _process(delta):
+	if music.playing == false:
+		music.play()
 
 func _on_Player_dead():
 	music.stop()
