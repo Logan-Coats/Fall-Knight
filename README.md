@@ -34,6 +34,9 @@ Fall Knight is meant to feel like a castlevania-type of game, with a catch... yo
  
  
  -Autumn Birches tileset by [popcornflood](https://popcornflood.itch.io/)
+ 
+ 
+ -Parallax mountain background by [Ansimuz](https://ansimuz.itch.io/)
 ## Sounds:
 -Halloween music pack 2018 by [Sebastian Schwamm / Zebastian](https://zebby.itch.io/)
 
