@@ -27,6 +27,8 @@ onready var hurtbox = $hurtbox
 
 func _ready():
 	randomize()
+	var tilemap_rect = get_parent().get_node("Fall").get_used_rect()
+	
 
 
 func _process(delta):
