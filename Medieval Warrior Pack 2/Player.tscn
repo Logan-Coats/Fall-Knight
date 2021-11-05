@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://Medieval Warrior Pack 2/FullSpritesheet.png" type="Texture" id=1]
 [ext_resource path="res://Medieval Warrior Pack 2/Player.gd" type="Script" id=2]
@@ -10,7 +10,6 @@
 [ext_resource path="res://parallax_mountain_pack/layers/parallax-mountain-montain-far.png" type="Texture" id=8]
 [ext_resource path="res://parallax_mountain_pack/layers/parallax-mountain-bg.png" type="Texture" id=9]
 [ext_resource path="res://parallax_mountain_pack/layers/parallax-mountain-foreground-trees.png" type="Texture" id=10]
-[ext_resource path="res://Camera.tscn" type="PackedScene" id=11]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 12.1743
@@ -232,11 +231,6 @@ height = 16.0
 collision_layer = 2
 script = ExtResource( 2 )
 
-[node name="Camera2D" parent="." instance=ExtResource( 11 )]
-offset = Vector2( 0, -110 )
-current = true
-zoom = Vector2( 0.5, 0.5 )
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
@@ -265,7 +259,7 @@ autoplay = true
 motion_scale = Vector2( 0, 0.1 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 32, 0 )
+position = Vector2( 25.6504, 0 )
 scale = Vector2( 2.55543, 2.55543 )
 texture = ExtResource( 9 )
 
@@ -292,7 +286,7 @@ motion_scale = Vector2( 0.5, 0.1 )
 motion_mirroring = Vector2( 1088, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer4"]
-position = Vector2( 124.721, 19.5998 )
+position = Vector2( 125.055, 23.938 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 7 )
 
@@ -304,6 +298,17 @@ motion_mirroring = Vector2( 1088, 0 )
 position = Vector2( 124.721, 17.818 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 10 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.5, 0.5 )
+limit_left = 0
+limit_top = -720
+limit_right = 1280
+limit_bottom = 720
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+editor_draw_limits = true
 [connection signal="hitboxon" from="." to="." method="_on_Player_hitboxon"]
 [connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]
 [connection signal="timeout" from="Footstep/steptimer" to="." method="_on_steptimer_timeout"]

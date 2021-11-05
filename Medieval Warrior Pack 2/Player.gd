@@ -6,7 +6,7 @@ const hitsound = preload("res://Enemies/HitSound.tscn")
 
 const FRICTION = 500
 const ACCELERATION = 500
-const MAX_SPEED = 120
+const MAX_SPEED = 140
 const GRAVITY = 400
 const JUMPHEIGHT = 275
 
@@ -26,9 +26,13 @@ onready var hurtbox = $hurtbox
 
 
 func _ready():
-	randomize()
-	var tilemap_rect = get_parent().get_node("Fall").get_used_rect()
-	
+	#var tilemap_rect = get_parent().get_node("Fall").get_used_rect()
+	#var tilemap_cell_size = get_parent().get_node("Fall").cell_size
+	#$Camera2D.limit_left = tilemap_rect.position.x * tilemap_cell_size.x
+	#$Camera2D.limit_right = tilemap_rect.end.x * tilemap_cell_size.x
+	#$Camera2D.limit_top = tilemap_rect.position.y * tilemap_cell_size.y
+	#$Camera2D.limit_bottom = tilemap_rect.end.y * tilemap_cell_size.y
+	pass
 
 
 func _process(delta):
@@ -57,7 +61,7 @@ func _process(delta):
 					step = true
 					footstep.play()
 					steptimer.start(.333)
-		elif Input.is_action_pressed("attack") || Input.is_action_just_pressed("attack"):
+		elif (Input.is_action_pressed("attack") || Input.is_action_just_pressed("attack")) && hurtbox.invincible == false:
 			animp.play("attack")
 			swordhitbox.disabled = false
 			velocity.x = velocity.x/1.25
@@ -66,8 +70,11 @@ func _process(delta):
 			velocity.x = move_toward(velocity.x, 0,FRICTION*delta)
 			animp.play("idle")
 			swordhitbox.disabled = true
-			
-		if Input.is_action_pressed("attack") || Input.is_action_just_pressed("attack"):
+		if Input.is_action_pressed("ui_right") && Input.is_action_pressed("attack"):
+			animp.play("running")
+		elif Input.is_action_pressed("ui_left") && Input.is_action_pressed("attack"):
+			animp.play("running")
+		elif (Input.is_action_pressed("attack") || Input.is_action_just_pressed("attack")) && hurtbox.invincible == false:
 			animp.play("attack")
 			if(animp.frame == 1 || animp.frame == 2):
 				swordhitbox.disabled = false

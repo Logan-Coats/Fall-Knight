@@ -6,18 +6,20 @@ export var playerhealth = 4
 export var level = 0
 
 var levellist = ["res://Level1.tscn","res://Level2.tscn","res://Level3.tscn"]
-
+var dead = false
 func _ready():
 	$FadeINOUT/AnimationPlayer.play("fade in")
 	PlayerStats.health = playerhealth
+	dead = false
 	music.play()
 
-func _process(delta):
-	if music.playing == false:
+func _process(_delta):
+	if music.playing == false && dead == false:
 		music.play()
 
 func _on_Player_dead():
 	music.stop()
+	dead = true
 	$Restart/HBoxContainer.visible = true
 	$Restart/restart.visible = true
 	$Restart/youdied.visible = true
@@ -38,7 +40,7 @@ func _on_Button_pressed():
 	
 
 
-func _on_Area2D_body_entered(body):
+func _on_Area2D_body_entered(_body):
 	$FadeINOUT/AnimationPlayer.play("fade out")
 	timer.start(1)
 
