@@ -12,12 +12,13 @@ const JUMPHEIGHT = 275
 
 var velocity = Vector2.ZERO
 var stats = PlayerStats
-
+var step = false
 signal dead
 signal hitboxon
 
 onready var animp = $AnimatedSprite
-
+onready var footstep = $Footstep
+onready var steptimer = $Footstep/steptimer
 onready var anims = $AnimatedSprite
 onready var swordhitbox = $hitboxpivot/hitbox/collisionshape2d
 onready var hitboxpivot = $hitboxpivot
@@ -40,12 +41,20 @@ func _process(delta):
 			hitboxpivot.rotation_degrees =0
 			if(is_on_floor()):
 				animp.play("running")
+				if step == false:
+					step = true
+					footstep.play()
+					steptimer.start(.333)
 		elif Input.is_action_pressed("ui_left")&& hurtbox.moveable == true:
 			velocity.x = move_toward(velocity.x, -MAX_SPEED,ACCELERATION*FRICTION)
 			anims.flip_h = true
 			hitboxpivot.rotation_degrees =180
 			if(is_on_floor()):
 				animp.play("running")
+				if step == false:
+					step = true
+					footstep.play()
+					steptimer.start(.333)
 		elif Input.is_action_pressed("attack") || Input.is_action_just_pressed("attack"):
 			animp.play("attack")
 			swordhitbox.disabled = false
@@ -87,9 +96,9 @@ func _on_hurtbox_area_entered(area):
 		var playerhurtsound = PlayerHurtSound.instance()
 		get_tree().current_scene.add_child(playerhurtsound)
 
-
-
-
 func _on_Player_hitboxon():
 	var Hitsound = hitsound.instance()
 	get_tree().current_scene.add_child(Hitsound)
+
+func _on_steptimer_timeout():
+	step = false
