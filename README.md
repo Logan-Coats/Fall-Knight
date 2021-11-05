@@ -19,24 +19,19 @@ Fall Knight is meant to feel like a castlevania-type of game, with a catch... yo
 -skeleton sprite pack by [Jesse M](https://jesse-m.itch.io)
 
 
-
--generic skeletons by [Bit Life](https://bit-life.itch.io/)
-
-
 -Input Prompts by [Kenney](https://kenney.nl)
  
  
- -Enemy Death Effect and Hit Effect from [HeartBeast](https://www.youtube.com/c/uheartbeast)'s godot action rpg tutorial -- could not find creator of asset.
- 
+-Enemy Death Effect and Hit Effect from [HeartBeast](https://www.youtube.com/c/uheartbeast)'s godot action rpg tutorial -- could not find creator of asset.
  
  
  -Undead Executioner by [Kronovi](https://darkpixel-kronovi.itch.io/)
  
  
- -Autumn Birches tileset by [popcornflood](https://popcornflood.itch.io/)
+-Autumn Birches tileset by [popcornflood](https://popcornflood.itch.io/)
  
  
- -Parallax mountain background by [Ansimuz](https://ansimuz.itch.io/)
+-Parallax mountain background by [Ansimuz](https://ansimuz.itch.io/)
 ## Sounds:
 -Halloween music pack 2018 by [Sebastian Schwamm / Zebastian](https://zebby.itch.io/)
 
