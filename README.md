@@ -117,3 +117,10 @@ Will probably begin working on level design tomorrow. Shaping up to be good!!
 
 ## Day Eight
 Took a day off from this project to focus on schoolwork, it had been piling up.
+
+## Day Nine
+Added parallax background and new camera limits.
+Did some bug fixing in main menu, player, rat and bat.
+Added death pits that instantly kill the player upon entry.
+Began designing the first stage.
+Will want to create the boss and work on creating a credits sequence, as well as adding a heart drop from enemies.
