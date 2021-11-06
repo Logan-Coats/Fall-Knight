@@ -9,7 +9,7 @@ var levellist = ["res://Level1.tscn","res://Level2.tscn","res://Level3.tscn"]
 var dead = false
 func _ready():
 	$FadeINOUT/AnimationPlayer.play("fade in")
-	PlayerStats.health = playerhealth
+	PlayerStats.maxhealth = playerhealth
 	dead = false
 	music.play()
 

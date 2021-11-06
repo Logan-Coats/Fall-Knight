@@ -1,9 +1,7 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://DungeonTileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://FallTileSet.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Camera.gd" type="Script" id=3]
-[ext_resource path="res://Camera.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Medieval Warrior Pack 2/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://HealthUI.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Level1.gd" type="Script" id=7]
@@ -23,20 +21,8 @@ script = ExtResource( 7 )
 playerhealth = 5
 level = 1
 
-[node name="Camera2D" parent="." instance=ExtResource( 4 )]
-position = Vector2( 579.264, 139.912 )
-current = true
-zoom = Vector2( 0.5, 0.5 )
-script = ExtResource( 3 )
-
-[node name="bottomright" parent="Camera2D/limits" index="1"]
-position = Vector2( 10000, 8000 )
-
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 579.264, 139.912 )
-
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
-remote_path = NodePath("../../Camera2D")
 
 [node name="Skeleton" parent="." instance=ExtResource( 13 )]
 position = Vector2( 724.653, 66.0109 )
@@ -65,6 +51,12 @@ anchor_bottom = 1.0
 margin_top = -110.0
 margin_right = 0.0
 margin_bottom = 0.0
+
+[node name="HealthUIEmpty" parent="CanvasLayer/HealthUI" index="0"]
+margin_right = 750.0
+
+[node name="HealthUIFull" parent="CanvasLayer/HealthUI" index="1"]
+margin_right = 750.0
 
 [node name="Restart" parent="." instance=ExtResource( 11 )]
 
@@ -96,8 +88,10 @@ shape = SubResource( 1 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
-[editable path="Camera2D"]
+[editable path="Player"]
 
 [editable path="FadeINOUT"]
+
+[editable path="CanvasLayer/HealthUI"]
 
 [editable path="Restart"]

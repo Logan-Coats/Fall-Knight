@@ -71,9 +71,9 @@ func _process(delta):
 			velocity.x = move_toward(velocity.x, 0,FRICTION*delta)
 			animp.play("idle")
 			swordhitbox.disabled = true
-		if Input.is_action_pressed("ui_right") && Input.is_action_pressed("attack"):
+		if Input.is_action_pressed("ui_right") && Input.is_action_pressed("attack") && is_on_floor():
 			animp.play("running")
-		elif Input.is_action_pressed("ui_left") && Input.is_action_pressed("attack"):
+		elif Input.is_action_pressed("ui_left") && Input.is_action_pressed("attack") && is_on_floor():
 			animp.play("running")
 		elif (Input.is_action_pressed("attack") || Input.is_action_just_pressed("attack")):
 			animp.play("attack")

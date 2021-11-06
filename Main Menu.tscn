@@ -48,10 +48,15 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 1281.0
-margin_bottom = 753.0
+margin_left = -5.3454
+margin_top = -1.78186
+margin_right = 1275.65
+margin_bottom = 751.218
 texture = ExtResource( 6 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="GameLabel" type="Label" parent="."]
 anchor_left = 0.5

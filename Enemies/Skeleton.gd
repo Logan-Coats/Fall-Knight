@@ -35,7 +35,7 @@ onready var afterdeathtimer = $afterdeathtimer
 
 func _ready():
 	randomize()
-	dropchance = randi() %100
+
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION*delta)
@@ -121,6 +121,7 @@ func _on_AttackBox_area_entered(area):
 
 func _on_afterdeathtimer_timeout():
 	queue_free()
+	dropchance = randi() %100
 	if dropchance > mindropchance:
 		var Heart = heart.instance()
 		get_tree().current_scene.add_child(Heart)

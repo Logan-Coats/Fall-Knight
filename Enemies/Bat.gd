@@ -16,6 +16,7 @@ var knockback = Vector2.ZERO
 var state = CHASE
 var dropchance
 const mindropchance = 75
+
 export var acceleration = 300
 export var maxspeed = 50
 export var friction = 200
@@ -30,7 +31,6 @@ onready var wandercontroller = $WanderController
 func _ready():
 	state = pick_random_state([IDLE,WANDER])
 	randomize()
-	dropchance = randi() %100
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, friction * delta)
@@ -83,6 +83,7 @@ func _on_hurtbox_area_entered(area):
 
 func _on_Stats_nohealth():
 	queue_free()
+	dropchance = randi() %100
 	if dropchance > mindropchance:
 		var Heart = heart.instance()
 		get_tree().current_scene.add_child(Heart)
