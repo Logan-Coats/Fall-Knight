@@ -8,7 +8,8 @@ const FRICTION = 500
 const ACCELERATION = 500
 const MAX_SPEED = 140
 const GRAVITY = 400
-const JUMPHEIGHT = 275
+const JUMPHEIGHT = 290
+
 
 var velocity = Vector2.ZERO
 var stats = PlayerStats

@@ -1,0 +1,108 @@
+{
+	"textures": [
+		{
+			"image": "undeadexecutioner.png",
+			"size": {
+				"w": 1002,
+				"h": 2048
+			},
+			"sprites": [
+				{
+					"filename": "attacking.png",
+					"region": {
+						"x": 1,
+						"y": 1,
+						"w": 600,
+						"h": 300
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "death.png",
+					"region": {
+						"x": 1,
+						"y": 303,
+						"w": 1000,
+						"h": 200
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "idle.png",
+					"region": {
+						"x": 1,
+						"y": 605,
+						"w": 500,
+						"h": 100
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "idle2.png",
+					"region": {
+						"x": 1,
+						"y": 907,
+						"w": 400,
+						"h": 200
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "skill1.png",
+					"region": {
+						"x": 1,
+						"y": 1209,
+						"w": 600,
+						"h": 200
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "summon.png",
+					"region": {
+						"x": 1,
+						"y": 1511,
+						"w": 400,
+						"h": 200
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:0c03f99566248005bee9e58fed1c89d0:691e42f549ea1efd280a0430330f4135:1f86dae978f63906755cf526b8e9b37b$"
+	}
+}

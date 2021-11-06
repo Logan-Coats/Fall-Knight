@@ -16,7 +16,7 @@ font_data = ExtResource( 1 )
 size = 30
 font_data = ExtResource( 2 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "text fade"
 length = 3.0
 loop = true
@@ -33,7 +33,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.270588 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=4]
 size = 25
 font_data = ExtResource( 2 )
 
@@ -87,7 +87,7 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-"anims/text fade" = SubResource( 4 )
+"anims/text fade" = SubResource( 3 )
 
 [node name="FadeINOUT" parent="." instance=ExtResource( 4 )]
 
@@ -102,7 +102,7 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -105.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 text = "created by Logan Coats
 for the 2021 NWMSU Game Jam"
 align = 1

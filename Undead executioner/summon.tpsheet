@@ -1,0 +1,63 @@
+{
+	"textures": [
+		{
+			"image": "summon.png",
+			"size": {
+				"w": 202,
+				"h": 320
+			},
+			"sprites": [
+				{
+					"filename": "summonAppear.png",
+					"region": {
+						"x": 1,
+						"y": 1,
+						"w": 150,
+						"h": 100
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "summonDeath.png",
+					"region": {
+						"x": 1,
+						"y": 103,
+						"w": 150,
+						"h": 100
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "summonIdle.png",
+					"region": {
+						"x": 1,
+						"y": 205,
+						"w": 200,
+						"h": 50
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:dd71f982e41c377aa8ca7ce4f24f5cf3:2487067da9f4e8e98ac1b4030b1a5338:979a28fb90bc5e66655024e5bd901f52$"
+	}
+}
