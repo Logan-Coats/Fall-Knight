@@ -10,6 +10,7 @@ var dead = false
 func _ready():
 	$FadeINOUT/AnimationPlayer.play("fade in")
 	PlayerStats.maxhealth = playerhealth
+	PlayerStats.health = playerhealth
 	dead = false
 	music.play()
 
