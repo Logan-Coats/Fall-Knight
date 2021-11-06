@@ -62,6 +62,7 @@ shape = SubResource( 1 )
 [node name="Bat" type="AnimatedSprite" parent="."]
 frames = SubResource( 6 )
 animation = "fly"
+frame = 3
 playing = true
 
 [node name="Stats" parent="." instance=ExtResource( 2 )]

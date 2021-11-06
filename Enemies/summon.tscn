@@ -1,0 +1,247 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://Hitbox Hurtbox/hurtbox.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Hitbox Hurtbox/hitbox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Enemies/PlayerDetectionZone.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Enemies/summon.gd" type="Script" id=4]
+[ext_resource path="res://Undead executioner/Undead executioner puppet/png/summonIdle.png" type="Texture" id=5]
+[ext_resource path="res://Undead executioner/Undead executioner puppet/png/summonAppear.png" type="Texture" id=6]
+[ext_resource path="res://Undead executioner/Undead executioner puppet/png/summonDeath.png" type="Texture" id=7]
+
+[sub_resource type="CircleShape2D" id=23]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 5 )
+region = Rect2( 50, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 5 )
+region = Rect2( 100, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 5 )
+region = Rect2( 150, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 6 )
+region = Rect2( 50, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 6 )
+region = Rect2( 100, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 50, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 6 )
+region = Rect2( 50, 50, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 6 )
+region = Rect2( 100, 50, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 7 )
+region = Rect2( 50, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 7 )
+region = Rect2( 100, 0, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 50, 50, 50 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 7 )
+region = Rect2( 50, 50, 50, 50 )
+
+[sub_resource type="SpriteFrames" id=16]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "idle",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"loop": false,
+"name": "spawn",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
+"loop": true,
+"name": "death",
+"speed": 10.0
+} ]
+
+[sub_resource type="Animation" id=17]
+resource_name = "death"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "death" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "idle"
+loop = true
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "idle" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "spawn"
+length = 0.5
+step = 0.083
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "spawn" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.083, 0.166, 0.249, 0.332, 0.415 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+
+[sub_resource type="CapsuleShape2D" id=20]
+radius = 8.07632
+height = 9.29147
+
+[sub_resource type="CapsuleShape2D" id=21]
+radius = 8.61188
+height = 11.9662
+
+[sub_resource type="CircleShape2D" id=22]
+radius = 194.777
+
+[node name="summon" type="KinematicBody2D"]
+collision_layer = 16
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 23 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 16 )
+animation = "idle"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/death = SubResource( 17 )
+anims/idle = SubResource( 18 )
+anims/spawn = SubResource( 19 )
+
+[node name="hitbox" parent="." instance=ExtResource( 2 )]
+collision_mask = 4
+
+[node name="collisionshape2d" parent="hitbox" index="0"]
+position = Vector2( -0.588181, 1.87288 )
+shape = SubResource( 20 )
+disabled = false
+
+[node name="hurtbox" parent="." instance=ExtResource( 1 )]
+collision_layer = 8
+
+[node name="CollisionShape2D" parent="hurtbox" index="0"]
+position = Vector2( 0, 1.52588e-05 )
+shape = SubResource( 21 )
+
+[node name="PlayerDetectionZone" parent="." instance=ExtResource( 3 )]
+
+[node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
+position = Vector2( 0.374573, 0.374573 )
+shape = SubResource( 22 )
+
+[node name="Timer" type="Timer" parent="."]
+[connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+[editable path="hitbox"]
+
+[editable path="hurtbox"]
+
+[editable path="PlayerDetectionZone"]

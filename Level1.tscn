@@ -166,7 +166,7 @@ limit_bottom = 192
 position = Vector2( 1256, 128 )
 
 [node name="Bat2" parent="." instance=ExtResource( 10 )]
-position = Vector2( 2856, -40 )
+position = Vector2( 2504, -56 )
 
 [node name="Rat" parent="." instance=ExtResource( 12 )]
 position = Vector2( 1912, -24 )
