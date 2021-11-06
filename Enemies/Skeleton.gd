@@ -3,6 +3,7 @@ extends KinematicBody2D
 const EnemyDeathEffect = preload("res://Hit Effect/DeathEffect.tscn")
 const EnemyDeathSound = preload("res://Enemies/EnemyDeathSound.tscn")
 const SkeletonHurtSound = preload("res://Enemies/SkeletonHurtSound.tscn")
+const heart = preload("res://Heart.tscn")
 
 const FRICTION = 500
 const ACCELERATION = 500
@@ -20,6 +21,8 @@ var velocity = Vector2.ZERO
 var knockback = Vector2.ZERO
 var state = CHASE
 var faceright = true
+var dropchance
+const mindropchance = 75
 
 onready var stats = $Stats
 onready var sprite = $Skeleton
@@ -29,6 +32,10 @@ onready var playerdetectionzone = $PlayerDetectionZone
 onready var attackbox = $hitboxpivot/AttackBox/CollisionShape2D
 onready var hitboxpivot = $hitboxpivot
 onready var afterdeathtimer = $afterdeathtimer
+
+func _ready():
+	randomize()
+	dropchance = randi() %100
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, FRICTION*delta)
@@ -114,6 +121,10 @@ func _on_AttackBox_area_entered(area):
 
 func _on_afterdeathtimer_timeout():
 	queue_free()
+	if dropchance > mindropchance:
+		var Heart = heart.instance()
+		get_tree().current_scene.add_child(Heart)
+		Heart.global_position = global_position
 	var enemydeathsound = EnemyDeathSound.instance()
 	get_tree().current_scene.add_child(enemydeathsound)
 	var enemyDeathEffect  = EnemyDeathEffect.instance()
