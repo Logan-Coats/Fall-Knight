@@ -48,3 +48,8 @@ func _on_Area2D_body_entered(_body):
 func _on_Timer_timeout():
 	music.stop()
 	get_tree().change_scene(levellist[level+1])
+
+
+func _on_DeathPit_body_entered(body):
+	$FadeINOUT/AnimationPlayer.play("fade out")
+	PlayerStats.health = 0

@@ -40,8 +40,8 @@ func _process(delta):
 		animp.play("death")
 		hurtbox.collisionshape.set_deferred("disabled",true)
 		emit_signal("dead")
-	else:
-		if Input.is_action_pressed("ui_right") && hurtbox.moveable == true:
+	elif hurtbox.moveable == true:
+		if Input.is_action_pressed("ui_right"):
 			velocity.x = move_toward(velocity.x,MAX_SPEED,ACCELERATION*FRICTION)
 			anims.flip_h = false
 			hitboxpivot.rotation_degrees =0
@@ -51,7 +51,7 @@ func _process(delta):
 					step = true
 					footstep.play()
 					steptimer.start(.333)
-		elif Input.is_action_pressed("ui_left")&& hurtbox.moveable == true:
+		elif Input.is_action_pressed("ui_left"):
 			velocity.x = move_toward(velocity.x, -MAX_SPEED,ACCELERATION*FRICTION)
 			anims.flip_h = true
 			hitboxpivot.rotation_degrees =180
@@ -61,12 +61,12 @@ func _process(delta):
 					step = true
 					footstep.play()
 					steptimer.start(.333)
-		elif (Input.is_action_pressed("attack") || Input.is_action_just_pressed("attack")) && hurtbox.invincible == false:
+		elif (Input.is_action_pressed("attack") || Input.is_action_just_pressed("attack")):
 			animp.play("attack")
 			swordhitbox.disabled = false
 			velocity.x = velocity.x/1.25
 			velocity.y = velocity.y/1.25
-		elif is_on_floor() && hurtbox.invincible == false: 
+		elif is_on_floor(): 
 			velocity.x = move_toward(velocity.x, 0,FRICTION*delta)
 			animp.play("idle")
 			swordhitbox.disabled = true
@@ -74,7 +74,7 @@ func _process(delta):
 			animp.play("running")
 		elif Input.is_action_pressed("ui_left") && Input.is_action_pressed("attack"):
 			animp.play("running")
-		elif (Input.is_action_pressed("attack") || Input.is_action_just_pressed("attack")) && hurtbox.invincible == false:
+		elif (Input.is_action_pressed("attack") || Input.is_action_just_pressed("attack")):
 			animp.play("attack")
 			if(animp.frame == 1 || animp.frame == 2):
 				swordhitbox.disabled = false
@@ -82,7 +82,7 @@ func _process(delta):
 			else:
 				swordhitbox.disabled = true
 			velocity = velocity/1.25
-		elif Input.is_action_pressed("jump") && is_on_floor() && hurtbox.moveable == true:
+		elif Input.is_action_pressed("jump") && is_on_floor():
 			animp.play("jump")
 			velocity.y = -JUMPHEIGHT
 		elif velocity.y > 0 && hurtbox.invincible == false:
