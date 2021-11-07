@@ -1,9 +1,0 @@
-[gd_scene format=2]
-
-[node name="Camera2D" type="Camera2D"]
-
-[node name="limits" type="Node" parent="."]
-
-[node name="topleft" type="Position2D" parent="limits"]
-
-[node name="bottomright" type="Position2D" parent="limits"]
