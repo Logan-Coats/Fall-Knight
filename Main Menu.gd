@@ -7,6 +7,8 @@ func _ready():
 	$AnimationPlayer.play("text fade")
 
 func _input(event):
+	if Input.is_action_pressed("ui_cancel"):
+		get_tree().quit()
 	if event is InputEventKey && bro:
 		bro = false
 		$FadeINOUT/AnimationPlayer.play("fade out")
