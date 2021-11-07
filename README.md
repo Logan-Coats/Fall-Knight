@@ -32,6 +32,9 @@ Fall Knight is meant to feel like a castlevania-type of game, with a catch... yo
  
  
 -Parallax mountain background by [Ansimuz](https://ansimuz.itch.io/)
+
+
+-Sample Credits Code by [Ben Bishop](https://github.com/benbishopnz)
 ## Sounds:
 -Halloween music pack 2018 by [Sebastian Schwamm / Zebastian](https://zebby.itch.io/)
 
