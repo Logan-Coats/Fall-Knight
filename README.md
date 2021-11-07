@@ -124,3 +124,9 @@ Did some bug fixing in main menu, player, rat and bat.
 Added death pits that instantly kill the player upon entry.
 Began designing the first stage.
 Will want to create the boss and work on creating a credits sequence, as well as adding a heart drop from enemies.
+
+## Day Ten
+Added hearts and implemented them as enemy drops.
+Designed 2nd level, a sort of transition into the 'dungeon' or 'castle'.
+Added a summon for the boss that will chase the player and die in one hit. 
+Still dont know how to implement the boss.
