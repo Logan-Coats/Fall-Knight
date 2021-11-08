@@ -71,3 +71,8 @@ func _on_Timer_timeout():
 			state = IDLE
 		SKILL:#back to idle
 			state = IDLE
+
+
+func _on_hurtbox_area_entered(area):
+	stats.health -= area.damage
+	#boss hurt noise

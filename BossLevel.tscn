@@ -740,6 +740,7 @@ position = Vector2( 64, 40 )
 position = Vector2( 448, 40 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[connection signal="area_entered" from="Boss/hurtbox" to="Boss" method="_on_hurtbox_area_entered"]
 [connection signal="timeout" from="Boss/Timer" to="Boss" method="_on_Timer_timeout"]
 
 [editable path="Player"]
