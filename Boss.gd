@@ -18,7 +18,7 @@ enum{
 }
 
 var state = IDLE
-
+var timeractive = false
 func _ready():
 	randomize()
 
@@ -26,10 +26,12 @@ func _process(delta):
 	match state:
 		IDLE:
 			animp.play("idle")
-			timer.start(2)
+			if timeractive == false:
+				timer.start(2)
+				timeractive = true
 		ATTACKL:
 			pass
-		ATTACKR:
+		ATTACKR:#for all attack and move, move to left or right position2d, when there start timer for (0) or just (.1)
 			pass
 		MOVEL:
 			pass
@@ -37,21 +39,35 @@ func _process(delta):
 			pass
 		SUMMON:
 			animp.play("summon")
+			if timeractive == false:
+				timer.start(1)
+				timeractive = true
 		SKILL:
 			animp.play("Skill")
-			timer.start(1.5)
+			if timeractive == false:
+				timer.start(1.5)
+				timeractive = true
 
 func summon():
 	pass
-	#spawn 2 summons then idle
+	#spawn 2 summons
 
 
 func _on_Timer_timeout():
-	pass
-	#use another match here to avoid 100000 if statements and multiple timers.
-	#if state=idle:
-		#if flip_h true: moveR else; moveL
-	#elif state = mover
-		#attackL
-	#elif state = moveL
-		#attackR
+
+	timeractive = false
+	match state:
+		IDLE:
+			pass #rand to decide move left or right
+		ATTACKL: #rand to decide summon or skill
+			pass
+		ATTACKR:#rand to decide summon or skill
+			pass
+		MOVEL: #attack right
+			state = ATTACKR
+		MOVER: #attack left
+			state = ATTACKL
+		SUMMON:#back to idle
+			state = IDLE
+		SKILL:#back to idle
+			state = IDLE

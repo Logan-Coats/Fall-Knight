@@ -662,10 +662,7 @@ limit_top = -144
 limit_right = 512
 limit_bottom = 144
 
-[node name="FadeIN-OUT" parent="." instance=ExtResource( 15 )]
-
-[node name="ColorRect" parent="FadeIN-OUT" index="1"]
-visible = false
+[node name="FadeINOUT" parent="." instance=ExtResource( 15 )]
 
 [node name="Timer" type="Timer" parent="."]
 
@@ -691,8 +688,11 @@ margin_right = 129.0
 visible = false
 
 [node name="Boss" type="KinematicBody2D" parent="."]
-position = Vector2( 256, 248 )
+position = Vector2( 263.127, 84.9655 )
 script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Stats" parent="Boss" instance=ExtResource( 3 )]
 maxhealth = 8
@@ -710,17 +710,17 @@ shape = SubResource( 32 )
 [node name="CollisionShape2D" parent="Boss/hurtbox" index="0"]
 position = Vector2( -3.05026, 0 )
 shape = SubResource( 33 )
+disabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss"]
-visible = false
 position = Vector2( -8, 0 )
 shape = SubResource( 34 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Boss"]
 scale = Vector2( 1.23973, 1.23973 )
 frames = SubResource( 90 )
-animation = "skill"
-frame = 11
+animation = "summon"
+frame = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Boss"]
 anims/AttackL = SubResource( 91 )
@@ -733,16 +733,16 @@ anims/summon = SubResource( 97 )
 
 [node name="Timer" type="Timer" parent="Boss"]
 
-[node name="b1" type="Position2D" parent="."]
+[node name="left" type="Position2D" parent="."]
 position = Vector2( 64, 40 )
 
-[node name="b2" type="Position2D" parent="."]
+[node name="right" type="Position2D" parent="."]
 position = Vector2( 448, 40 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 [connection signal="timeout" from="Boss/Timer" to="Boss" method="_on_Timer_timeout"]
 
 [editable path="Player"]
-
-[editable path="FadeIN-OUT"]
 
 [editable path="Restart"]
 
