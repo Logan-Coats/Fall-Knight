@@ -5,7 +5,7 @@ onready var timer = $Timer
 export var playerhealth = 4
 export var level = 0
 
-var levellist = ["res://Level1.tscn","res://Level2.tscn","res://Level3.tscn"]
+var levellist = ["res://Level1.tscn","res://Level2.tscn","res://Level3.tscn","res://BossLevel.tscn","res://GodotCredits.tscn"]
 var dead = false
 func _ready():
 	$FadeINOUT/AnimationPlayer.play("fade in")
@@ -54,3 +54,7 @@ func _on_Timer_timeout():
 func _on_DeathPit_body_entered(body):
 	$FadeINOUT/AnimationPlayer.play("fade out")
 	PlayerStats.health = 0
+
+
+func _on_Boss_dead():
+	timer.start(5)
