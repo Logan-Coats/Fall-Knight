@@ -226,6 +226,9 @@ tile_data = PoolIntArray( -196527, 0, 131074, -196520, 0, 196610, -196519, 0, 13
 
 [node name="FadeINOUT" parent="." instance=ExtResource( 8 )]
 
+[node name="ColorRect" parent="FadeINOUT" index="1"]
+color = Color( 0, 0, 0, 0 )
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HealthUI" parent="CanvasLayer" instance=ExtResource( 6 )]
@@ -249,7 +252,7 @@ visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )
-volume_db = -13.339
+volume_db = -15.0
 autoplay = true
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -257,7 +260,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 4360, -280 )
+position = Vector2( 4312, -272 )
 shape = SubResource( 3 )
 
 [node name="Timer" type="Timer" parent="."]
