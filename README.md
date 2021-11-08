@@ -133,3 +133,9 @@ Added hearts and implemented them as enemy drops.
 Designed 2nd level, a sort of transition into the 'dungeon' or 'castle'.
 Added a summon for the boss that will chase the player and die in one hit. 
 Still dont know how to implement the boss.
+
+## Day Eleven
+Added credits sequence.
+Fixed collision bug in level 2.
+Began work on level 3. 
+Drafting ideas for the boss.
