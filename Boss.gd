@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+const Hurtnoise = preload("res://Enemies/Bosshurtnoise.tscn")
+const summon = preload("res://Enemies/summon.tscn")
 onready var stats = $Stats
 onready var hitboxpivot = $Pivot
 onready var hitbox = $Pivot/hitbox/collisionshape2d
@@ -9,7 +11,7 @@ onready var animp = $AnimationPlayer
 onready var timer = $Timer
 onready var leftpt = get_parent().get_node("left").global_position
 onready var rightpt = get_parent().get_node("right").global_position
-var rand
+
 enum{
 	ATTACKR,
 	ATTACKL,
@@ -20,6 +22,7 @@ enum{
 	SKILL,
 	DEAD
 }
+
 signal dead
 
 export var state = IDLE
@@ -27,6 +30,7 @@ var timeractive = false
 var velocity = Vector2.ZERO
 var acceleration = 300
 var maxspeed = 75
+var rand
 
 func _ready():
 	randomize()
@@ -51,7 +55,9 @@ func _process(delta):
 		ATTACKR:#for all attack and move, move to left or right position2d, when there start timer for (0) or just (.1)
 			sprite.flip_h = false
 			animp.play("AttackR")
-			accelerate_towards_point(rightpt,delta)
+			#accelerate_towards_point(rightpt,delta)
+			var direction = global_position.direction_to(rightpt)
+			velocity = velocity.move_toward(direction * maxspeed, acceleration * delta)
 			velocity = move_and_slide(velocity)
 			if self.global_position.x > rightpt.x:
 				velocity = Vector2.ZERO
@@ -69,7 +75,9 @@ func _process(delta):
 		MOVER:
 			sprite.flip_h = false
 			animp.play("MoveR")
-			accelerate_towards_point(rightpt,delta)
+			var direction = global_position.direction_to(rightpt)
+			velocity = velocity.move_toward(direction * maxspeed, acceleration * delta)
+			#accelerate_towards_point(rightpt,delta)
 			velocity = move_and_slide(velocity)
 			if self.global_position.x > rightpt.x:
 				velocity = Vector2.ZERO
@@ -88,8 +96,9 @@ func _process(delta):
 			pass
 
 func summon():
-	pass
-	#spawn 2 summons
+	var Summon = summon.instance()
+	get_tree().current_scene.add_child(Summon)
+	Summon.global_position = global_position
 
 func accelerate_towards_point(point,delta):
 	var direction = global_position.direction_to(point)
@@ -101,6 +110,7 @@ func accelerate_towards_point(point,delta):
 func _on_Timer_timeout():
 	rand = randi() %100
 	timeractive = false
+	hitbox.disabled = true
 	match state:
 		IDLE:
 			if rand > 50:
@@ -125,13 +135,13 @@ func _on_Timer_timeout():
 			state = IDLE
 		DEAD:
 			queue_free()
-
+			emit_signal("dead")
 
 func _on_hurtbox_area_entered(area):
 	stats.health -= area.damage
+	var hurtnoise = Hurtnoise.instance()
+	get_tree().current_scene.add_child(hurtnoise)
 	if stats.health == 0:
-		emit_signal("dead")
 		animp.play("death")
 		timer.start(2)
 		state = DEAD
-	#boss hurt noise

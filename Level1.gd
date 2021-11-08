@@ -36,7 +36,6 @@ func _on_Button2_pressed():
 
 func _on_Button_pressed():
 	$FadeINOUT/AnimationPlayer.play("fade out")
-	
 	get_tree().quit()
 	
 
@@ -57,4 +56,5 @@ func _on_DeathPit_body_entered(body):
 
 
 func _on_Boss_dead():
-	timer.start(5)
+	$FadeINOUT/AnimationPlayer.play("fade out")
+	timer.start(1)

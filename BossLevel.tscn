@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=2]
+[gd_scene load_steps=95 format=2]
 
 [ext_resource path="res://Hitbox Hurtbox/hitbox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Hitbox Hurtbox/hurtbox.tscn" type="PackedScene" id=2]
@@ -15,6 +15,11 @@
 [ext_resource path="res://Restart.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Medieval Warrior Pack 2/Player.tscn" type="PackedScene" id=14]
 [ext_resource path="res://FadeINOUT.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Enemies/sfx/hit/hit-deep_110.wav" type="AudioStream" id=16]
+[ext_resource path="res://Enemies/sfx/hit/hit-deep_109.wav" type="AudioStream" id=17]
+[ext_resource path="res://DungeonTileMap.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Misc tiles.tscn" type="PackedScene" id=19]
+[ext_resource path="res://music/Nightmare Castle.ogg" type="AudioStream" id=20]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 31.6201
@@ -372,6 +377,30 @@ tracks/4/keys = {
 "update": 1,
 "values": [ false, true, false, true ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("Hitnoise1:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.083 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Hitnoise2:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.747 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=68]
 length = 1.083
@@ -436,6 +465,30 @@ tracks/4/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, false, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Hitnoise1:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.166 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Hitnoise2:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.747 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
 }
 
 [sub_resource type="Animation" id=69]
@@ -661,22 +714,17 @@ script = ExtResource( 10 )
 playerhealth = 6
 level = 3
 
+[node name="Dungeon" parent="." instance=ExtResource( 18 )]
+tile_data = PoolIntArray( -327680, 0, 196614, -327679, 0, 196608, -327678, 0, 196609, -327677, 0, 196608, -327676, 0, 196613, -327675, 0, 196613, -327674, 0, 196613, -327673, 0, 196613, -327672, 0, 196613, -327671, 0, 196613, -327670, 0, 196613, -327669, 0, 196613, -327668, 0, 196613, -327667, 0, 196613, -327666, 0, 196613, -327665, 0, 196612, -262144, 0, 65542, -262143, 0, 327680, -262142, 0, 327681, -262141, 0, 327680, -262140, 0, 327681, -262139, 0, 327680, -262138, 0, 327681, -262137, 0, 327680, -262136, 0, 327681, -262135, 0, 327680, -262134, 0, 327681, -262133, 0, 327680, -262132, 0, 327681, -262131, 0, 327680, -262130, 0, 327681, -262129, 0, 65539, -196608, 0, 65542, -196607, 0, 327680, -196606, 0, 327681, -196605, 0, 327680, -196604, 0, 327681, -196603, 0, 327680, -196602, 0, 327681, -196601, 0, 327680, -196600, 0, 327681, -196599, 0, 327680, -196598, 0, 327681, -196597, 0, 327680, -196596, 0, 327681, -196595, 0, 327680, -196594, 0, 327681, -196593, 0, 65539, -131072, 0, 65542, -131071, 0, 327680, -131070, 0, 327681, -131069, 0, 327680, -131068, 0, 327681, -131067, 0, 327680, -131066, 0, 327681, -131065, 0, 327680, -131064, 0, 327681, -131063, 0, 327680, -131062, 0, 327681, -131061, 0, 327680, -131060, 0, 327681, -131059, 0, 327680, -131058, 0, 327681, -131057, 0, 65539, -65536, 0, 65542, -65535, 0, 327680, -65534, 0, 327681, -65533, 0, 327680, -65532, 0, 327681, -65531, 0, 327680, -65530, 0, 327681, -65529, 0, 327680, -65528, 0, 327681, -65527, 0, 327680, -65526, 0, 327681, -65525, 0, 327680, -65524, 0, 327681, -65523, 0, 327680, -65522, 0, 327681, -65521, 0, 65539, 0, 0, 65542, 1, 0, 327680, 2, 0, 327681, 3, 0, 327680, 4, 0, 327681, 5, 0, 327680, 6, 0, 327681, 7, 0, 327680, 8, 0, 327681, 9, 0, 327680, 10, 0, 327681, 11, 0, 327680, 12, 0, 327681, 13, 0, 327680, 14, 0, 327681, 15, 0, 65539, 65536, 0, 65542, 65537, 0, 327680, 65538, 0, 327681, 65539, 0, 327680, 65540, 0, 327681, 65541, 0, 327680, 65542, 0, 327681, 65543, 0, 327680, 65544, 0, 327681, 65545, 0, 327680, 65546, 0, 327681, 65547, 0, 327680, 65548, 0, 327681, 65549, 0, 327680, 65550, 0, 327681, 65551, 0, 65539, 131072, 0, 65542, 131073, 0, 327680, 131074, 0, 327681, 131075, 0, 327680, 131076, 0, 327681, 131077, 0, 327680, 131078, 0, 327681, 131079, 0, 327680, 131080, 0, 327681, 131081, 0, 327680, 131082, 0, 327681, 131083, 0, 327680, 131084, 0, 327681, 131085, 0, 327680, 131086, 0, 327681, 131087, 0, 65539, 196608, 0, 131078, 196609, 0, 65540, 196610, 0, 65541, 196611, 0, 65541, 196612, 0, 65540, 196613, 0, 65541, 196614, 0, 65540, 196615, 0, 65540, 196616, 0, 65541, 196617, 0, 65540, 196618, 0, 65540, 196619, 0, 65541, 196620, 0, 65540, 196621, 0, 65540, 196622, 0, 65540, 196623, 0, 131075, 262144, 0, 131076, 262145, 0, 131076, 262146, 0, 131076, 262147, 0, 131076, 262148, 0, 131076, 262149, 0, 131076, 262150, 0, 131076, 262151, 0, 131076, 262152, 0, 131076, 262153, 0, 131076, 262154, 0, 131076, 262155, 0, 131076, 262156, 0, 131076, 262157, 0, 131076, 262158, 0, 131076, 262159, 0, 131076 )
+
+[node name="Dungeon2" parent="." instance=ExtResource( 18 )]
+tile_data = PoolIntArray( -262142, 0, 262149, -262137, 0, 262149, -262136, 0, 262149, -262131, 0, 262149, 1, 0, 7, 5, 0, 262146, 10, 0, 262146, 14, 0, 2, 65541, 0, 327682, 65546, 0, 327682 )
+
+[node name="Misc tiles" parent="." instance=ExtResource( 19 )]
+tile_data = PoolIntArray( -262140, 0, 196611, -262134, 0, 131076, -262133, 0, 65540, -262132, 0, 4, -262131, 0, 131075, -196595, 0, 131075, 131075, 0, 65539, 131083, 0, 2, 131084, 0, 2, 131085, 0, 2, 131086, 0, 2 )
+
 [node name="Player" parent="." instance=ExtResource( 14 )]
-
-[node name="CollisionShape2D" parent="Player" index="0"]
-visible = false
-
-[node name="AnimatedSprite" parent="Player" index="1"]
-visible = false
-
-[node name="hitboxpivot" parent="Player" index="2"]
-visible = false
-
-[node name="hitbox" parent="Player/hitboxpivot" index="0"]
-visible = false
-
-[node name="hurtbox" parent="Player" index="3"]
-visible = false
+position = Vector2( 78.4877, -161.138 )
 
 [node name="ParallaxLayer" parent="Player/ParallaxBackground" index="0"]
 visible = false
@@ -701,9 +749,6 @@ limit_bottom = 144
 
 [node name="FadeINOUT" parent="." instance=ExtResource( 15 )]
 
-[node name="ColorRect" parent="FadeINOUT" index="1"]
-visible = false
-
 [node name="Timer" type="Timer" parent="."]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -721,19 +766,12 @@ visible = false
 [node name="HBoxContainer" parent="Restart" index="1"]
 visible = false
 
-[node name="Label" parent="Restart/HBoxContainer" index="1"]
-margin_left = 26.0
-margin_right = 153.0
-
-[node name="Button" parent="Restart/HBoxContainer" index="2"]
-margin_left = 91.0
-margin_right = 129.0
-
 [node name="restart" parent="Restart" index="2"]
 visible = false
 
 [node name="Boss" type="KinematicBody2D" parent="."]
-position = Vector2( 263.127, 84.9655 )
+position = Vector2( 253.127, 53.4655 )
+collision_layer = 16
 script = ExtResource( 11 )
 __meta__ = {
 "_edit_group_": true
@@ -743,14 +781,15 @@ __meta__ = {
 maxhealth = 8
 
 [node name="Pivot" type="Position2D" parent="Boss"]
-rotation = 3.14159
 
 [node name="hitbox" parent="Boss/Pivot" instance=ExtResource( 1 )]
+collision_mask = 4
 
 [node name="collisionshape2d" parent="Boss/Pivot/hitbox" index="0"]
 shape = SubResource( 1 )
 
 [node name="hurtbox" parent="Boss" instance=ExtResource( 2 )]
+collision_layer = 8
 
 [node name="CollisionShape2D" parent="Boss/hurtbox" index="0"]
 position = Vector2( -3.05026, 0 )
@@ -764,7 +803,7 @@ shape = SubResource( 3 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Boss"]
 scale = Vector2( 1.23973, 1.23973 )
 frames = SubResource( 66 )
-animation = "idle2"
+animation = "attack"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Boss"]
 anims/AttackL = SubResource( 67 )
@@ -778,13 +817,25 @@ anims/summon = SubResource( 74 )
 
 [node name="Timer" type="Timer" parent="Boss"]
 
+[node name="Hitnoise1" type="AudioStreamPlayer" parent="Boss"]
+stream = ExtResource( 16 )
+
+[node name="Hitnoise2" type="AudioStreamPlayer" parent="Boss"]
+stream = ExtResource( 17 )
+
 [node name="left" type="Position2D" parent="."]
-position = Vector2( 64, 40 )
+position = Vector2( 96, 40 )
 
 [node name="right" type="Position2D" parent="."]
-position = Vector2( 448, 40 )
+position = Vector2( 416, 40 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 20 )
+autoplay = true
+[connection signal="dead" from="Player" to="." method="_on_Player_dead"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="Restart/HBoxContainer/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Restart/HBoxContainer/Button" to="." method="_on_Button_pressed"]
 [connection signal="dead" from="Boss" to="." method="_on_Boss_dead"]
 [connection signal="area_entered" from="Boss/hurtbox" to="Boss" method="_on_hurtbox_area_entered"]
 [connection signal="timeout" from="Boss/Timer" to="Boss" method="_on_Timer_timeout"]

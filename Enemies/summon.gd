@@ -13,6 +13,7 @@ var dead = false
 
 func _ready():
 	animp.play("spawn")
+	
 
 func _physics_process(delta):
 	if !dead:
