@@ -811,9 +811,6 @@ limit_bottom = 144
 
 [node name="FadeINOUT" parent="." instance=ExtResource( 15 )]
 
-[node name="ColorRect" parent="FadeINOUT" index="1"]
-visible = false
-
 [node name="Timer" type="Timer" parent="."]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -840,7 +837,7 @@ collision_layer = 16
 script = ExtResource( 11 )
 
 [node name="Stats" parent="Boss" instance=ExtResource( 3 )]
-maxhealth = 8
+maxhealth = 5
 
 [node name="Pivot" type="Position2D" parent="Boss"]
 
