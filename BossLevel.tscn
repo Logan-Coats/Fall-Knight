@@ -811,6 +811,9 @@ limit_bottom = 144
 
 [node name="FadeINOUT" parent="." instance=ExtResource( 15 )]
 
+[node name="ColorRect" parent="FadeINOUT" index="1"]
+visible = false
+
 [node name="Timer" type="Timer" parent="."]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -835,14 +838,18 @@ visible = false
 position = Vector2( 253.127, 53.4655 )
 collision_layer = 16
 script = ExtResource( 11 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Stats" parent="Boss" instance=ExtResource( 3 )]
 maxhealth = 8
 
 [node name="Pivot" type="Position2D" parent="Boss"]
+
+[node name="hitbox2" parent="Boss/Pivot" instance=ExtResource( 1 )]
+collision_mask = 4
+
+[node name="collisionshape2d" parent="Boss/Pivot/hitbox2" index="0"]
+position = Vector2( -2.16669, -1.24527 )
+disabled = false
 
 [node name="hitbox" parent="Boss/Pivot" instance=ExtResource( 1 )]
 collision_mask = 4
@@ -907,6 +914,8 @@ autoplay = true
 [editable path="FadeINOUT"]
 
 [editable path="Restart"]
+
+[editable path="Boss/Pivot/hitbox2"]
 
 [editable path="Boss/Pivot/hitbox"]
 
