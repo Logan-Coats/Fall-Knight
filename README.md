@@ -147,3 +147,8 @@ Tried to rework the music for fading in and out of scenes but couldnt get it to 
 
 ## Day Thirteen
 24 Hours Remain.
+Added secondary hitboxes for boss and skeleton, so that the player is hurt upon walking into them.
+Summons should now drop hearts 3/4ths of the time.
+Worked more on level 3, ups and downs, more platforming focused than the other 2 levels, but still nothing super technical or difficult. 
+Treating these levels as sort of a 'tech demo' for what I wanted to accomplish.
+Very awesome and cool!
