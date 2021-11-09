@@ -1,5 +1,5 @@
 # Fall-Knight
- Game created for NWMSU ACM's Game Jam Fall 2021
+Game created for the Game Jam hosted by Northwest Missouri State University's Association of Computing Machinery in Fall 2021, October 27 through November 10th.
 Created by Logan Coats
 
 
