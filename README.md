@@ -139,3 +139,11 @@ Added credits sequence.
 Fixed collision bug in level 2.
 Began work on level 3. 
 Drafting ideas for the boss.
+
+## Day Twelve
+Began coding and making boss.
+Almost completed entire boss in 1 day.
+Tried to rework the music for fading in and out of scenes but couldnt get it to work.
+
+## Day Thirteen
+24 Hours Remain.
