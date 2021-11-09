@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+const heart = preload("res://Heart.tscn")
+
 export var acceleration = 300
 export var maxspeed = 150
 export var friction = 200
@@ -10,9 +12,12 @@ onready var sprite = $Sprite
 
 var velocity = Vector2.ZERO
 var dead = false
+var dropchance
+var mindropchance = 25
 
 func _ready():
 	animp.play("spawn")
+	randomize()
 	
 
 func _physics_process(delta):
@@ -40,4 +45,9 @@ func _on_hurtbox_area_entered(area):
 
 
 func _on_Timer_timeout():
+	dropchance = randi() %100
+	if dropchance > mindropchance:
+		var Heart = heart.instance()
+		get_tree().current_scene.add_child(Heart)
+		Heart.global_position = global_position
 	queue_free()
