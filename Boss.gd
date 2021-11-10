@@ -141,6 +141,7 @@ func _on_hurtbox_area_entered(area):
 	stats.health -= area.damage
 	var hurtnoise = Hurtnoise.instance()
 	get_tree().current_scene.add_child(hurtnoise)
+	hurtbox.create_hit_effect()
 	if stats.health == 0:
 		animp.play("death")
 		timer.start(2)
