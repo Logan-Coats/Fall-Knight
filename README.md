@@ -152,3 +152,9 @@ Summons should now drop hearts 3/4ths of the time.
 Worked more on level 3, ups and downs, more platforming focused than the other 2 levels, but still nothing super technical or difficult. 
 Treating these levels as sort of a 'tech demo' for what I wanted to accomplish.
 Very awesome and cool!
+Populated Level 3 with enemies.
+
+## Day Fourteen
+Dawn of the final day:
+Made sure the boss was properly making a hit noise and hit effect upon being hit by player.
+Exported and tested, turned in for the game jam.
